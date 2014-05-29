@@ -9,6 +9,7 @@
 <body>
 	<? include '_chromeframe.php'; ?>
     <div class="wrapper" style="opacity: 0">
+        <audio src="assets/audio/audio.mp3"></audio>
     	<div class="intro-site">
     		<header>
     			<div class="container">
@@ -18,9 +19,9 @@
     							<a href="#">
     								<img class="img-away" src="assets/images/thumb_away.png">
     								<div class="info-away">
-    									<span class="first-line shadow white">Já assistiu</span><br>
-    									<span class="second-line shadow white">ao convite do</span><br>
-    									<span class="last-line shadow yellow">Away?</span>
+    									<span class="first-line shadow white f-16">Já assistiu</span><br>
+    									<span class="second-line shadow white f-16">ao convite do</span><br>
+    									<span class="last-line shadow yellow f-28">Away?</span>
     								</div>
     							</a>
     						</div>
@@ -37,9 +38,9 @@
                     <div class="row">
                         <div class="col-md-4 info-left">
                             <div class="info-data" style="display:none;">
-                                <span class="data">02</span>
-                                <span class="mes">Agosto</span>
-                                <span class="ano">2014</span>
+                                <span class="data white shadow f-48">02</span><br>
+                                <span class="mes yellow shadow f-28">Agosto</span><br>
+                                <span class="ano cream shadow f-20">2014</span>
                             </div>
                         </div>
                         <div class="col-md-4  center-logo">
@@ -47,24 +48,24 @@
                         </div>
                         <div class="col-md-4  info-right">
                             <div class="info-local-valor" style="display:none;">
-                                <span class="local">AABB</span>
-                                <span class="cidade">Aracaju/SE</span>
-                                <span class="valor">R$: 125,00</span>
+                                <span class="local white shadow f-48">AABB</span><br>
+                                <span class="cidade cream shadow f-28">Aracaju/SE</span><br>
+                                <span class="valor yellow shadow f-20">R$: 125,00</span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 chamada-intro">
-                            <h2 class="txt-chamada">
-                                <span class="first-line">E você vai ficar de fora desse evento</span><br>
-                                <span class="second-line">repleto de <span class="yellow">código</span> e <span class="yellow">rock n’ roll?</span></span>
+                            <h2 class="txt-chamada rotate">
+                                <span class="first-line white shadow f-34">E você vai ficar de fora desse evento</span><br>
+                                <span class="second-line white shadow f-40">repleto de <span class="yellow">código</span> e <span class="yellow">rock n’ roll?</span></span>
                             </h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 button-info-promo">
-                            <a class="button-inscreva-topo" href="http://www.eventick.com.br/rockandcode">inscreva-se já</a>
-                            <span class="info-promo-topo">Camisa Grátis - 100 primeiros inscritos</span>
+                            <a class="button-inscreva-topo button-green f-40 radius" href="#">Inscreva-se já!</a>
+                            <span class="info-promo-topo white shadow f-12"><span class="yellow">Camisa Grátis</span> - 100 primeiros inscritos</span>
                         </div>
                     </div>
                 </div>
@@ -77,11 +78,11 @@
                         <div class="col-md-12">
                             <div class="img-intro-atacoes"><img src=""></div>
                             <div class="info-intro-section info-intro-atracoes">
-                                <h2 class="title-section">
-                                    <span class="first-line white ">Atrações do </span><br>
-                                    <span class="second-line yellow ">Rock and Code</span>
+                                <h2 class="title-section rotate">
+                                    <span class="first-line white shadow rotate f-60">Atrações do </span><br>
+                                    <span class="second-line yellow shadow f-60">Rock and Code</span>
                                 </h2>
-                                <h3 class="desc-section">Confira a lista dos palestrantes que estarão presentes nesse dia épico.</h3>
+                                <h3 class="desc-section white rotate shadow f-20">Confira a lista dos palestrantes que estarão presentes nesse dia épico.</h3>
                             </div>
                         </div>
                     </div>
@@ -201,14 +202,30 @@
                                 </div>
 
                             </div>
-                            <div class="col-md-7 guitar"></div>
+                        </div>
+                        <div class="col-md-7 guitar"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="patrocinadores platinum">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="title-patrocinadores shadow white f-34">Patrocínio Platinum</h3>
+                            <div class="lista-patrocinadores">
+                                <div class="patrocinador"><a href="#"><img>Patrocinio</a></div>
+                                <div class="patrocinador"><a href="#"><img>Patrocinio</a></div>
+                                <div class="patrocinador"><a href="#"><img>Patrocinio</a></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="local-evento"></section>
     </div>
     <? include '_js_scripts.php'; ?>
     <? include '_analytics.php'; ?>
+    <br clear="all">
 </body>
 </html>

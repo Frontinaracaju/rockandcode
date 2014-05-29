@@ -3,7 +3,7 @@
  *
  * @author Jefersson Nathan <none@none.none>
  */
-$(document).ready(function() {
+;$(document).ready(function() {
 
     // Used to modify rendered elements visibility to `visible`
     var modifyVisibilityToVisible = {"visibility": "visible"};
@@ -25,7 +25,7 @@ $(document).ready(function() {
     setTimeout(function(){
         $('.info-data').addClass('animated fadeInRight').show();
         $('.info-local-valor').addClass('animated fadeInLeft').show();
-    }, 300);
+    }, 370);
 
 
 /*------ Script Placeholder ------*/
