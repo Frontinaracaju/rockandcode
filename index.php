@@ -1,13 +1,13 @@
 <?php include '_doctype.php'; ?>
 <head>
-    <? include '_head.php'; ?>
-    <? include '_scripts_head.php'; ?>
+    <?php include '_head.php'; ?>
+    <?php include '_scripts_head.php'; ?>
     <meta charset="UTF-8">
     <title>Rock and Code - Front in Aracaju</title>
 </head>
 
 <body>
-	<? include '_chromeframe.php'; ?>
+	<?php include '_chromeframe.php'; ?>
     <div class="wrapper" style="opacity: 0">
         <!-- <audio src="assets/audio/audio.mp3" id="intro-sound" autoplay="autoplay"></audio> -->
     	<div class="intro-site">
@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="row row-palestrantes" id="first-line-speakers">
-                        <div class="col-md-3 col-sm-6 item-palestrante almir">
+                        <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Almir Filho" data-class="unknow" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_almir.png" alt="Foto do palestrante Almir"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Almir Filho</h4>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante suissa">
+                        <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Suissa" data-class="before-1" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_suissa.png" alt="Foto do palestrante Suissa"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante gustavo">
+                        <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Gustavo Costa" data-class="before-2" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_gustavo.png" alt="Foto do palestrante Gustavo"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Gustavo Costa</h4>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante emer">
+                        <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Jean Carlos Emer" data-class="before-3" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_emer.png" alt="Foto do palestrante Jean Carlo Emer"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Emer</h4>
@@ -157,6 +157,16 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="row speaker-description arrow-up">
+
+                        <h2 class="name yellow shadow">Almir Filho</h2>
+                        <img src="assets/images/avatares/avatar_almir.png" alt="Almir e tals" class="left">
+                        <p class="description f-16 white">A Associação Atlética Banco do Brasil Aracaju - AABB AJU - está situada na Rod. José Sarney s/n - Praia do Robalo, Aracaju (SE) - Numa área de lazer completa com 02 (dois) campos de futebol society oficial, 01 (um) mini-campo, 02 (duas) quadras poliesportivas, 01 (uma) quadra de tênis, 01 (uma) piscina adulto, 01 (uma) piscina infantil, Belíssimo salão de festas, salão de jog os,churasqueiras coletivas e individuais, 02 (dois) restaurantes, chalés confortáveis ao seu inteiro dispor e muito calor humano...</p>
+
+                    </div>
+
+                    <div class="clearfix"></div>
 
                     <div class="row row-palestrantes" id="second-line-speakers">
                         <div class="col-md-3 col-sm-6 item-palestrante jaydson">
@@ -567,7 +577,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                         </div>
                         <div class="col-md-6 col-sm-4">
                            <div class="desenvolvimento">
-                                <div class="alfama f-12 yellow shadow">Desenvolvido por <a href="www.alfamaweb.com.br" target="_blank"><img src="assets/images/logo_alfama_footer.png"></a></div>
+                                <div class="alfama f-12 yellow shadow">Desenvolvido por <a href="//www.alfamaweb.com.br" target="_blank"><img src="assets/images/logo_alfama_footer.png"></a></div>
                             </div>
                         </div>
                     </div>
@@ -575,7 +585,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
             </div>
         </footer>
     </div>
-    <? include '_js_scripts.php'; ?>
-    <? include '_analytics.php'; ?>
+    <?php include '_js_scripts.php'; ?>
+    <?php include '_analytics.php'; ?>
 </body>
 </html>
