@@ -453,7 +453,6 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
             </div>
         </section>
         <section class="o-que-falam">
-            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="bg-title-falam"><h3 class="title-falam f-26 txt-center">O que a galera tem falado do Rock and Code</h3></div>
@@ -516,7 +515,6 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <footer>
             <div class="fire-footer">

@@ -6,12 +6,6 @@
  */
 ;!$(document).ready(function() {
 
-    $.get(
-        'https://graph.facebook.com/search?q=aracaju&limit=3&access_token=406829089432264|IE7eT8bbRiuVr7uDtYaLSSn0-dg',
-        function(data){
-
-        }
-    );
     // Trigger scroll action for mobile devices
     // in a mobile environment the event scroll is not triggered
     // in we have them that to launch the event manually.
@@ -92,16 +86,6 @@
                 $('#main-menu').remove();
             }, 1000);
         });
-
-        // var elementWithInformation = $(this).parents('.item-palestrante');
-        // var name = elementWithInformation.attr('data-name');
-        // var description = elementWithInformation.attr('data-description');
-
-        // $('.speaker-description').removeClass('before-1 before-2 before-3');
-        // $('.speaker-description').addClass(classe);
-        // $('.speaker-description h2').html(name);
-        // $('.speaker-description .description').html(description);
-
     });
 
     $('#js-extended-menu').on('click', function(){
@@ -229,12 +213,12 @@
         }
 
          /* Slide Local */
-         if ($(window).scrollTop() > $('.slider-local').position().top + 2500) {
+         if ($(window).scrollTop() > $('.content-local').position().top - 300) {
             $('.slider-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
 
          /* Info local description */
-         if ($(window).scrollTop() > $('.info-local').position().top + 2600) {
+         if ($(window).scrollTop() > $('.content-local').position().top + 50) {
             $('.info-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
 
@@ -283,7 +267,7 @@
         }
 
          /* Patrocinio apoiadores */
-        if ($(window).scrollTop() > ($(window).scrollTop() - $('.apoiadores').position().top)) {
+        if ($(window).scrollTop() > $('.apoiadores').position().top - 300) {
             $('.patrocinadores.apoiadores .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.apoiadores .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
