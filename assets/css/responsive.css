@@ -5,15 +5,168 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-	
+	.info-data{
+		left: 15px;
+	}	
+	.info-local-valor{
+		left: 0;
+	}
+	.intro-talks{
+		width: 100%;
+	}
+	.item-lightning {
+    	background-position: 104px top;
+	}
+	.title-patrocinadores{
+		text-align: center;
+	}
+	.patrocinador{
+		display: table;
+	}
+	.lista-patrocinadores{
+		display: table;
+    	margin: 40px auto 0;
+	}
+	.arrow-prev{
+		top: 125px;
+	}
+	.arrow-next{
+		top: 95px;
+	}
+	.info-ingresso{
+		margin-top: -155px;
+	}
+	.desc-info-ingresso{
+		margin-top: 122px;
+	}
+	.desc-info-ingresso{
+		float: none;
+	}
+	.button-info-ingresso{
+		display: table;
+	    float: none;
+	    margin: 55px auto;
+	}
+	.logo-grande{
+		display: table;
+    	margin: 0 auto;
+    	float: none;
+	}
+	.txt-sobre{
+		margin-left: 0 !important;
+		text-align: center;
+	}
+	.desc-sobre{
+		float: left;
+    	margin-top: 15px;
+    	max-width: none;
+    	margin-bottom: 30px;
+	}
+	.button-fotos-anterior{
+		float: none;
+		display: table;
+		margin: 0 auto;
+	}
+	.title-novidades{
+		display: table;
+    	margin: 75px auto 20px;
+    	float: none;
+	}
+	.title-novidades .second-line{
+		margin-left: 70px;
+	}
+	.desc-novidade{
+		font-size: 14px;
+	}
+	.info-novidade{
+		margin-top: 55px;
+	}
+	.info-julio{
+		margin-left: 0;
+	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-	
+	.info-data{
+		left: 15px;
+	}	
+	.info-local-valor{
+		left: 0;
+	}
+	.intro-talks{
+		width: 100%;
+	}
+	.item-lightning {
+    	background-position: 104px top;
+	}
+	.title-patrocinadores{
+		text-align: center;
+	}
+	.patrocinador{
+		display: table;
+	}
+	.lista-patrocinadores{
+		display: table;
+    	margin: 40px auto 0;
+	}
+	.arrow-prev{
+		top: 125px;
+	}
+	.arrow-next{
+		top: 95px;
+	}
+	.info-ingresso{
+		margin-top: -155px;
+	}
+	.desc-info-ingresso{
+		margin-top: 122px;
+	}
+	.button-info-ingresso{
+		display: table;
+	    float: none;
+	    margin: 55px auto;
+	}
+	.logo-grande{
+		display: table;
+    	margin: 0 auto;
+    	float: none;
+	}
+	.txt-sobre{
+		margin-left: 0 !important;
+		text-align: center;
+	}
+	.desc-sobre{
+		float: left;
+    	margin-top: 15px;
+    	max-width: none;
+    	margin-bottom: 30px;
+	}
+	.button-fotos-anterior{
+		float: none;
+		display: table;
+		margin: 0 auto;
+	}
+	.title-novidades{
+		display: table;
+    	margin: 75px auto 20px;
+    	float: none;
+	}
+	.title-novidades .second-line{
+		margin-left: 70px;
+	}
+	.desc-novidade{
+		font-size: 14px;
+	}
+	.info-novidade{
+		margin-top: 55px;
+	}
+	.info-julio{
+		margin-left: 0;
+	}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-	
+
 }

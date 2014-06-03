@@ -3,7 +3,7 @@
  *
  * @author Jefersson Nathan <none@none.none>
  */
-;$(document).ready(function() {
+;!$(document).ready(function() {
 
     // Used to modify rendered elements visibility to `visible`
     var modifyVisibilityToVisible = {"visibility": "visible"};
@@ -11,6 +11,7 @@
     // Put it on inline css...
     $('.chamada-intro .first-line').css({"visibility": "hidden"});
     $('.chamada-intro .second-line').css({"visibility": "hidden"});
+    $('.info-promo-topo').css({"visibility": "hidden"});
 
     // Created to not display hard screen to user :)
     $('.wrapper').animate({opacity: 1}, 1000);
@@ -20,13 +21,35 @@
         $('.chamada-intro .second-line').addClass('fadeInRight animated').css(modifyVisibilityToVisible);
     }, 900);
 
-    $('.logo').addClass('tada animated');
+    setTimeout(function() {
+        $('.logo').addClass('tada animated');
+    }, 1000);
 
     setTimeout(function(){
         $('.info-data').addClass('animated fadeInRight').show();
         $('.info-local-valor').addClass('animated fadeInLeft').show();
     }, 370);
 
+    setTimeout(function(){
+        $('.button-inscreva-topo').addClass('animated bounceIn').css(modifyVisibilityToVisible).show();
+    }, 1300);
+
+    setTimeout(function(){
+        $('.info-promo-topo').addClass('animated fadeInUp').css(modifyVisibilityToVisible);
+    }, 2000);
+
+    // Add informations
+    $('.bt-ver-mais').css({cursor: "pointer"}).on('click', function(){
+        // $(this).parents('.row-palestrantes').after(
+        //     '<section
+        //     class="explanation"
+        //     style="width: 100%; left: 0;position: absolute;background: #969393">
+        //     [[NOME]]
+        //     </section>'
+        // );
+    });
+
+    // document.getElementsByTagName('audio')[0].play();
 
 /*------ Script Placeholder ------*/
     if (!Modernizr.input.placeholder) {
