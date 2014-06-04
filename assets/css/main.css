@@ -118,26 +118,26 @@ textarea {
 	padding:0;
 	margin:0;
 	list-style:none;
-    font-family: 'aventuraregular';	
+    font-family: 'aventuraregular';
     letter-spacing: 0.5px;
 }
 h1,h2,h3,h4,h5{
-	font-weight:lighter;	
+	font-weight:lighter;
 }
 a:visited,
 a:focus,
 a:hover{
 	text-decoration:none !important;
-	outline:none;	
+	outline:none;
 }
 html{
-    background: url('../images/pattern_site.png') repeat; 
-    height: 100%;  
+    background: url('../images/pattern_site.png') repeat;
+    height: 100%;
 }
 body{
-	overflow-x:hidden;	
+	overflow-x:hidden;
     height: 100%;
-    background: transparent;	
+    background: transparent;
 }
 .rotate{
     transform: rotate(350deg);
@@ -265,7 +265,8 @@ body{
     margin-bottom: 18px;
 }
 .container{
-	max-width:970px;	
+    position: relative;
+	max-width:970px;
 }
 
 /*---- intro-site ----*/
@@ -351,22 +352,28 @@ body{
     display: table;
     margin: 0 auto 20px;
 }
-.button-info-promo{
-    margin-bottom: 65px;
-}
 
 /*---- atracoes ----*/
 .intro-section{
    width: 100%;
-   min-height: 423px; 
+   min-height: 423px;
    position: relative;
 }
 .intro-atracoes{
     background: url('../images/faixa_intro_atracoes.png') no-repeat center top;
     margin-top: -60px;
 }
+.img-intro-atacoes{
+    float: left;
+    margin-left: 60px;
+    margin-right: 30px;
+    margin-top: 25px;
+    visibility: hidden;
+}
+.info-intro-atracoes{
+    margin-top: 85px;
+}
 .lista-atracoes{
-   
     min-height: 700px;
     margin-top: -110px;
     padding: 130px 0;
@@ -386,7 +393,7 @@ body{
     margin-top: -10px;
 }
 .item-palestrante{
-    background: url('../images/avatares/bg_fire.png') no-repeat center top;   
+    background: url('../images/avatares/bg_fire.png') no-repeat center top;
     padding-top: 75px;
 }
 .avatar-palestrante {
@@ -458,7 +465,7 @@ body{
     z-index: 1;
 }
 .css3{
-  background: url('../images/css3.png') no-repeat 0 top; 
+  background: url('../images/css3.png') no-repeat 0 top;
   height: 325px;
   left: -25px;
   position: absolute;
@@ -467,7 +474,7 @@ body{
   z-index: 2;;
 }
 .javascript{
-    background: url('../images/js.png') no-repeat 0 top;   
+    background: url('../images/js.png') no-repeat 0 top;
     width: 271px;
     position: absolute;
     right: -45px;
@@ -476,13 +483,13 @@ body{
     z-index: 4;
 }
 .fia{
-    background: url('../images/fia_blur.png') no-repeat 0 top; 
+    background: url('../images/fia_blur.png') no-repeat 0 top;
     width: 106px;
     height: 149px;
     position: absolute;
     top: 160px;
     right: -70px;
-    z-index: 4;   
+    z-index: 4;
 }
 .lista-patrocinadores{
     clear: both;
@@ -500,6 +507,15 @@ body{
 .intro-local{
     background: url('../images/faixa_intro_local.png') no-repeat center top;
     margin-top: 60px;
+}
+.img-intro-local{
+    float: left;
+    margin-left: 91px;
+    margin-right: 30px;
+    margin-top: 75px;
+}
+.info-intro-local{
+    margin-top: 115px;
 }
 .slider-local{
     margin-top: 20px;
@@ -588,22 +604,43 @@ body{
     background: url('../images/faixa_intro_ingresso.png') no-repeat center top;
     margin-top: 60px;
 }
+.img-intro-ingresso{
+    float: left;
+    margin-left: 60px;
+    margin-right: 30px;
+    margin-top: 96px;
+}
+.info-intro-ingresso{
+    margin-top: 100px;
+}
+.img-intro-sobre{
+    float: left;
+    margin-left: -79px;
+    margin-top: 49px;
+    width: 500px;
+}
+.info-intro-sobre{
+    margin-top: 135px;
+}
 .info-ingresso{
     background: url('../images/bg_info_ingresso.png') no-repeat center top;
     width: 100%;
-    min-height: 370px;
+    min-height: 370px;   
+    float: left;
     margin-top: -168px;
+}
+.ingresso-col{
+    margin-top: 145px;
 }
 .desc-info-ingresso{
     float: left;
     margin-left: 50px;
-    margin-top: 145px;
     max-width: 540px;
     transform: rotate(354deg);
 }
 .info-desconto{
     margin-top: 12px;
-    color: #c13030;  
+    color: #c13030;
 }
 .email-fia{
     text-decoration: underline;
@@ -611,10 +648,9 @@ body{
 }
 .button-info-ingresso{
     float: right;
-    margin-top: 130px;
 }
 .info-lote-ingresso{
-   margin-top: 35px; 
+   margin-top: 35px;
 }
 .prata{
     margin-top: -40px;
@@ -633,7 +669,7 @@ body{
     background: url('../images/bg_info_sobre.png') no-repeat center top;
     min-height: 700px;
     width: 100%;
-    margin-top: -50px;   
+    margin-top: -50px;
 }
 .logo-grande{
     float: left;
@@ -696,8 +732,8 @@ body{
     margin-top: 65px;
 }
 .bg-title-falam{
-    background: url('../images/flamula_social.png') no-repeat center top; 
-    height: 98px;   
+    background: url('../images/flamula_social.png') no-repeat center top;
+    height: 98px;
     line-height: 60px;
 }
 .title-falam{
@@ -725,7 +761,7 @@ body{
 .item-falam .avatar{
     background: url('../images/bg_avatar_falam.png') no-repeat center top;
     height: 71px;
-    float: left; 
+    float: left;
 }
 .info-item-falam{
     position: relative;
@@ -774,7 +810,7 @@ footer{
     clear: both;
 }
 .fire-footer{
-    background: url('../images/bg_fire_footer.png') no-repeat center bottom;  
+    background: url('../images/bg_fire_footer.png') no-repeat center bottom;
     min-height: 231px;
 }
 .title-footer{
@@ -822,6 +858,16 @@ footer{
 .info-julio .icon-rede{
     float: left;
     margin-right: 5px;
+}
+.chamada-intro .first-line,
+.chamada-intro .second-line,
+.info-intro-atracoes .first-line,
+.info-intro-atracoes .second-line,
+.info-intro-atracoes .desc-section,
+.apresentador,
+.item-palestrante,
+.info-promo-topo{
+    visibility: hidden;
 }
 /* ==========================================================================
    Helper classes
@@ -1011,4 +1057,37 @@ footer{
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+/**
+ *   Menu
+ */
+#overlay{
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    position: fixed;
+    background: rgba(160, 139, 27, 0.85);
+}
+#main-menu{
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 10;
+    position: fixed;
+}
+    #main-menu li{
+        width: 100%;
+        padding: 10px;
+        background: red;
+        margin-bottom: 10px;
+    }
+.fixed-navbar{
+    background: #FFF;
+    position: fixed;
+    width: 100%;
+    padding: 40px;
+    z-index: 9;
+    box-shadow: 10px 10px 110px -10px #000000
 }

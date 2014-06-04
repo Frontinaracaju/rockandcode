@@ -17,7 +17,7 @@
     					<div class="col-sm-12">
     						<div class="chamada-away">
     							<a href="https://www.youtube.com/watch?v=u0gWY8-llY4">
-    								<img class="img-away" src="assets/images/thumb_away.png">
+    								<img class="img-away" src="assets/images/thumb_away.png" alt="icone away">
     								<div class="info-away">
     									<span class="first-line shadow white f-16">Já assistiu</span><br>
     									<span class="second-line shadow white f-16">ao convite do</span><br>
@@ -36,13 +36,21 @@
     					</div>
     				</div>
                     <div class="row">
-                        <div class="col-sm-4 info-left">
+                        <div class="col-sm-4 info-left hidden-xs">
                             <div class="info-data" style="display:none;">
                                 <span class="data white shadow f-48">02</span><br>
                                 <span class="mes yellow shadow f-28">Agosto</span><br>
                                 <span class="ano cream shadow f-20">2014</span>
                             </div>
                         </div>
+                        <div class="col-sm-4 info-left visible-xs">
+                            <div class="info-data" >
+                                <span class="data white shadow f-36">02</span>
+                                <span class="mes yellow shadow f-36">Agosto</span>
+                                <span class="ano cream shadow f-36">2014</span>
+                            </div>
+                        </div>
+
                         <div class="col-sm-4  center-logo">
                             <h1 class="logo"><a href=""><img src="assets/images/rockandcode.png" alt="Logo Rock and Code"></a></h1>
                         </div>
@@ -55,7 +63,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12 chamada-intro">
+                        <div class="col-sm-12 chamada-intro hidden-xs">
                             <h2 class="txt-chamada rotate">
                                 <span class="first-line white shadow f-34">E você vai ficar de fora desse evento</span><br>
                                 <span class="second-line white shadow f-40">repleto de <span class="yellow">código</span> e <span class="yellow">rock n’ roll?</span></span>
@@ -76,7 +84,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="img-intro-atacoes"><img src=""></div>
+                            <div class="img-intro-atacoes hidden-xs hidden-sm"><img src="assets/images/microfone_intro_atracoes.png"></div>
                             <div class="info-intro-section info-intro-atracoes">
                                 <h2 class="title-section rotate">
                                     <span class="first-line white shadow rotate f-60">Atrações do </span><br>
@@ -89,29 +97,30 @@
                 </div>
             </div>
             <div class="lista-atracoes">
-                <div class="container">
+                <div class="container container-apresentador">
 
                     <div class="row row-apresentador">
                         <div class="col-md-12">
-                            
                             <div class="splash-apresentador">
-                                <h3 class="title-apresentador rotate">
-                                    <span class="first-line white shadow f-34">Apresentador</span><br>
-                                    <span class="second-line yellow shadow f-34">do evento</span>
-                                </h3>
-                                <div class="apresentador">
-                                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_juarez.png" alt="Foto do palestrante Juarez"></div>
-                                    <div class="info-palestrante">
-                                        <h4 class="title-palestrante white shadow f-26 txt-center">Juarez Filho</h4>
-                                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Caravana Web</h5>
-                                        <div class="bt-ver-mais f-20">+</div>
+                                <div class="centering-apresentador">
+                                    <h3 class="title-apresentador rotate">
+                                        <span class="first-line white shadow f-34">Apresentador</span><br>
+                                        <span class="second-line yellow shadow f-34">do evento</span>
+                                    </h3>
+                                    <div class="apresentador">
+                                        <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_juarez.png" alt="Foto do palestrante Juarez"></div>
+                                        <div class="info-palestrante">
+                                            <h4 class="title-palestrante white shadow f-26 txt-center">Juarez Filho</h4>
+                                            <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Caravana Web</h5>
+                                            <div class="bt-ver-mais f-20">+</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row row-palestrantes">
+                    <div class="row row-palestrantes" id="first-line-speakers">
                         <div class="col-md-3 col-sm-6 item-palestrante almir">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_almir.png" alt="Foto do palestrante Almir"></div>
                             <div class="info-palestrante">
@@ -149,7 +158,7 @@
                         </div>
                     </div>
 
-                    <div class="row row-palestrantes">
+                    <div class="row row-palestrantes" id="second-line-speakers">
                         <div class="col-md-3 col-sm-6 item-palestrante jaydson">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_jaydson.png" alt="Foto do palestrante Jaydson"></div>
                             <div class="info-palestrante">
@@ -203,7 +212,7 @@
                             </div>
                             <div class="row">
 
-                                <div class="col-sm-6 item-lightning davidson">
+                                <div class="col-xs-6 item-lightning davidson">
                                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_aguarde.png" alt="Foto do palestrante à decidir"></div>
                                     <div class="info-palestrante">
                                         <h4 class="title-palestrante white shadow f-20 txt-center">Davidson Fellipe</h4>
@@ -212,7 +221,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6 item-lightning davidson">
+                                <div class="col-xs-6 item-lightning davidson">
                                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_aguarde.png" alt="Foto do palestrante à decidir"></div>
                                     <div class="info-palestrante">
                                         <h4 class="title-palestrante white shadow f-20 txt-center">Davidson Fellipe</h4>
@@ -223,7 +232,7 @@
 
                             </div>
                         </div>
-                        <div class="col-md-7 guitar-parallax hidden-sm">
+                        <div class="col-md-7 guitar-parallax hidden-sm hidden-xs">
                             <div class="fia"></div>
                             <div class="javascript"></div>
                             <div class="guitar"></div>
@@ -240,9 +249,9 @@
                             <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="platina">Platinum</span></h3>
                             <div class="lista-patrocinadores">
                                 <div class="row">
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +264,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="img-intro-local"><img src=""></div>
+                            <div class="img-intro-local hidden-xs hidden-sm"><img src="assets/images/celular_intro_local.png"></div>
                             <div class="info-intro-section info-intro-local">
                                 <h2 class="title-section rotate">
                                     <span class="first-line white shadow rotate f-60">Local do </span><br>
@@ -272,11 +281,11 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="slider-local">
-                                <a id="prev" class="button-slider arrow-prev f-40" href="javascript:void();"><</a>
+                                <a id="prev" class="button-slider arrow-prev f-40 hidden-xs" href="javascript:void();"><</a>
                                 <div class="lista-imagens-local">
                                     <img src="assets/images/slider-local/img-1.jpg" class="img-slider-local">
                                 </div>
-                                <a id="next" class="button-slider arrow-next f-40" href="javascript:void();">></a>
+                                <a id="next" class="button-slider arrow-next f-40 hidden-xs" href="javascript:void();">></a>
                             </div>
                             <div class="info-local">
                                 <div class="title-local f-34 txt-center">AABB- Aracaju/SE</div>
@@ -298,11 +307,11 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                             <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="yellow">Ouro</span></h3>
                             <div class="lista-patrocinadores">
                                 <div class="row">
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -315,7 +324,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="img-intro-ingresso"><img src=""></div>
+                            <div class="img-intro-ingresso hidden-xs hidden-sm"><img src="assets/images/rock_intro_ingresso.png"></div>
                             <div class="info-intro-section info-intro-ingresso">
                                 <h2 class="title-section rotate">
                                     <span class="first-line white shadow rotate f-60">Garanta já </span><br>
@@ -330,7 +339,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
             <div class="info-ingresso">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12 ingresso-col">
                             <div class="desc-info-ingresso">
                                 <div class="info-incluso f-16">Camisa promocional para os 100 primeiros inscritos, almoço grátis e encerramento Rock and Code  inclusos no valor da inscrição.</div>
                                 <div class="info-desconto f-14">*Caso tenha interesse em comprar mais de 4 ingressos, entre em contato pelo e-mail <a href="mailto:contato@frontinaracaju.com.br" class="email-fia">contato@frontinaracaju.com.br</a>  para solicitar o seu desconto .</div>
@@ -350,11 +359,11 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                             <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="silver">Prata</span></h3>
                             <div class="lista-patrocinadores">
                                 <div class="row">
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -367,7 +376,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="img-intro-sobre"><img src=""></div>
+                            <div class="img-intro-sobre hidden-xs hidden-sm"><img src="assets/images/fia_intro_sobre.png"></div>
                             <div class="info-intro-section info-intro-sobre">
                                 <h2 class="title-section rotate">
                                     <span class="first-line white shadow rotate f-60">Sobre o </span><br>
@@ -431,11 +440,11 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                             <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="brown">Bronze</span></h3>
                             <div class="lista-patrocinadores">
                                 <div class="row">
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                    <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                    <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +474,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 </div>
                             </div>
 
-                            <div class="item-falam hidden-sm">
+                            <div class="item-falam hidden-sm hidden-xs">
                                 <div class="txt-item-falam f-12">Ingressos comprados para o <a href="#" class="hashtag">#frontinaracaju</a>. <a href="#" class="link">http://frontinaracaju.com.br</a></div>
                                 <div class="info-item-falam">
                                     <div class="avatar"><img src="assets/images/avatar_falam.png" alt="avatar usuario" class="img-avatar"></div>
@@ -496,11 +505,11 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 <h3 class="title-patrocinadores shadow white f-34">Apoiadores do Evento</h3>
                                 <div class="lista-patrocinadores">
                                     <div class="row">
-                                        <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                        <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                        <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                        <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                        <div class="col-sm-2 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                        <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                        <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                        <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                        <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                        <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -515,11 +524,11 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                     <div class="row">
                         <div class="col-md-12">
                             <h3 class="title-footer yellow shadow f-40 rotate">Quem Faz o Evento</h3>
-                            <a class="button-equipe button-yellow radius f-12">Conheça a equipe completa</a>
+                            <a class="button-equipe button-yellow radius f-12 hidden-xs">Conheça a equipe completa</a>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <div class="info-italo">
                                 <h4 class="title-organizador yellow shadow f-26">Ítalo Waxman</h4>
                                 <h5 class="funcao-organizador white shadow f-12">Designer / Front-end</h5>
@@ -530,10 +539,10 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <div class="avatar-quemfaz"><img src="assets/images/avatares_footer.png" alt="avatar organização"></div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <div class="info-julio">
                                 <h4 class="title-organizador yellow shadow f-26">Júlio Cézar</h4>
                                 <h5 class="funcao-organizador white shadow f-12">Front-end Developer</h5>
@@ -550,7 +559,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
             <div class="faixa-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-sm-8">
+                        <div class="col-md-6 col-sm-8 hidden-xs">
                             <div class="info-footer">
                                 <div class="logo-footer"><img src="assets/images/rockandcode_footer.png" alt="logo rock and code" class="logo-fia-footer"></div>
                                 <div class="copyright white f-12">Rock and Code  <span class="yellow">© Copyright 2014</span>  -  Todos os direitos reservados.</div>
