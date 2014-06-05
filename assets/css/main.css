@@ -272,6 +272,7 @@ body{
 /*---- intro-site ----*/
 .intro-site{
     background: url('../images/bg_intro.jpg') no-repeat center top #000;
+    10px 10px 113px #000;
     min-height: 759px;
 }
 .chamada-away,
@@ -625,7 +626,7 @@ body{
 .info-ingresso{
     background: url('../images/bg_info_ingresso.png') no-repeat center top;
     width: 100%;
-    min-height: 370px;   
+    min-height: 370px;
     float: left;
     margin-top: -168px;
 }
@@ -680,6 +681,7 @@ body{
     float: left;
     max-width: 590px;
     margin-top: 100px;
+    margin-bottom: 25px;
 }
 .txt-sobre{
     font-family: 'kelson_sanslight';
@@ -699,8 +701,8 @@ body{
     margin-left: -40px;
 }
 .button-fotos-anterior{
-    float: left;
-    margin-top: 30px;
+    display: table;
+    margin: 0 auto;
 }
 
 /*---- novidades ----*/
@@ -864,8 +866,26 @@ footer{
 .info-intro-atracoes .first-line,
 .info-intro-atracoes .second-line,
 .info-intro-atracoes .desc-section,
-.apresentador,
-.item-palestrante,
+.info-intro-local .first-line,
+.info-intro-local .second-line,
+.info-intro-local .desc-section,
+.info-intro-sobre .first-line,
+.info-intro-sobre .second-line,
+.info-intro-sobre .desc-section,
+.apresentador, .talks-guitar,
+.item-lightning, .title-patrocinadores,
+.item-palestrante, .patrocinador,
+.local-evento, .slider-local,
+.patrocinadores.ouro .title-patrocinadores,
+.info-local, .ingresso,
+.info-intro-ingresso .first-line,
+.info-intro-ingresso .second-line,
+.info-intro-ingresso .desc-section,
+.title-apresentador,
+.intro-atracoes, .splash-apresentador,
+.img-intro-local, .button-info-ingresso,
+.img-intro-ingresso, .sobre, .img-intro-sobre,
+.novidades,
 .info-promo-topo{
     visibility: hidden;
 }

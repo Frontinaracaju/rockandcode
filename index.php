@@ -1,4 +1,4 @@
-<? include '_doctype.php'; ?>
+<?php include '_doctype.php'; ?>
 <head>
     <? include '_head.php'; ?>
     <? include '_scripts_head.php'; ?>
@@ -289,7 +289,7 @@
                             </div>
                             <div class="info-local">
                                 <div class="title-local f-34 txt-center">AABB- Aracaju/SE</div>
-                                <div class="info-local f-16 white txt-center">A Associação Atlética Banco do Brasil Aracaju - AABB AJU - está situada na Rod. José Sarney s/n - Praia do Robalo, Aracaju (SE) - Numa área de lazer completa com 02 (dois) campos de futebol society oficial, 01 (um) mini-campo, 02 (duas) quadras poliesportivas, 01 (uma) quadra de tênis, 01 (uma) piscina adulto, 01 (uma) 
+                                <div class="info-local f-16 white txt-center">A Associação Atlética Banco do Brasil Aracaju - AABB AJU - está situada na Rod. José Sarney s/n - Praia do Robalo, Aracaju (SE) - Numa área de lazer completa com 02 (dois) campos de futebol society oficial, 01 (um) mini-campo, 02 (duas) quadras poliesportivas, 01 (uma) quadra de tênis, 01 (uma) piscina adulto, 01 (uma)
 piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras coletivas e individuais, 02 (dois) restaurantes, chalés confortáveis ao seu inteiro dispor e muito calor humano...</div>
                                 <div class="buttons-local">
                                     <a class="button-info button-yellow radius f-20">Mais Informações</a>
@@ -387,7 +387,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <div class="info-sobre">
                 <div class="container">
                     <div class="row">
@@ -496,7 +496,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="patrocinadores apoiadores">
                     <div class="container">
