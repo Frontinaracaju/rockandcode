@@ -226,13 +226,13 @@
         }
 
         /* Patrocinadores */
-        if($(window).scrollTop() > $('.patrocinadores.platinum').position().top - 400) {
+        if($(window).scrollTop() > $('.patrocinadores.platinum').position().top - 450) {
             $('.patrocinadores.platinum .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.platinum .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
         /* Location */
-        if ($(window).scrollTop() > $('.local-evento').position().top - 400) {
+        if ($(window).scrollTop() > $('.local-evento').position().top - 450) {
             markMenuItem(3);
             $('.local-evento').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             setTimeout(function() {$('.img-intro-local').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);}, 1200);
@@ -245,7 +245,7 @@
         }
 
          /* Slide Local */
-         if ($(window).scrollTop() > $('.content-local').position().top - 300) {
+         if ($(window).scrollTop() > $('.content-local').position().top - 350) {
             $('.slider-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
 
@@ -253,8 +253,8 @@
          if ($(window).scrollTop() > $('.content-local').position().top + 50) {
             $('.info-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
-
-         if ($(window).scrollTop() > $('.intro-ingresso').position().top - 200) {
+0
+         if ($(window).scrollTop() > $('.intro-ingresso').position().top - 250) {
             markMenuItem(4);
             $('.intro-ingresso').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
 
@@ -276,31 +276,31 @@
         }
 
          /* Patrocinio ouro */
-        if ($(window).scrollTop() > $('.patrocinadores.ouro').position().top - 600) {
+        if ($(window).scrollTop() > $('.patrocinadores.ouro').position().top - 650) {
             $('.patrocinadores.ouro .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.ouro .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
          /* Patrocinio prata */
-        if ($(window).scrollTop() > $('.patrocinadores.prata').position().top - 400) {
+        if ($(window).scrollTop() > $('.patrocinadores.prata').position().top - 450) {
             $('.patrocinadores.prata .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.prata .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
          /* Patrocinio platinum */
-        if ($(window).scrollTop() > $('.patrocinadores.platinum').position().top - 400) {
+        if ($(window).scrollTop() > $('.patrocinadores.platinum').position().top - 450) {
             $('.patrocinadores.platinum .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.platinum .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
          /* Patrocinio bronze */
-        if ($(window).scrollTop() > $('.patrocinadores.bronze').position().top - 300) {
+        if ($(window).scrollTop() > $('.patrocinadores.bronze').position().top - 400) {
             $('.patrocinadores.bronze .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.bronze .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
          /* Patrocinio apoiadores */
-        if ($(window).scrollTop() > $('.apoiadores').position().top - 300) {
+        if ($(window).scrollTop() > $('.apoiadores').position().top - 400) {
             $('.patrocinadores.apoiadores .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.apoiadores .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }

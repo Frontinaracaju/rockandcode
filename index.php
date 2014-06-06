@@ -548,7 +548,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-footer yellow shadow f-40 rotate">Quem Faz o Evento</h3>
-                        <a class="button-equipe button-yellow radius f-12 hidden-xs">Conheça a equipe completa</a>
                     </div>
                 </div>
                 <div class="row">
