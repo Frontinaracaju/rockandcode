@@ -16,7 +16,6 @@
 
         loop = 1;
         for (var i in tweets) {
-            console.log(loop);
             $('.item-falam:nth-child(' + loop + ') .txt-item-falam').html(tweets[i].text);
             $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.nome-avatar').html(tweets[i].user.name);
             $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.usuario-avatar').html('@' + tweets[i].user.screen_name);
