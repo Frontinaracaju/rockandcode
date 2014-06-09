@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="row row-palestrantes" id="first-line-speakers">
-                        <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Almir Filho" data-class="unknow" data-description="Lorem ipsum e tals">
+                        <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Almir Filho" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nemo, numquam molestiae omnis assumenda quas amet impedit dicta labore ut repudiandae et voluptatum maiores. Saepe aspernatur eveniet enim minima quibusdam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, perferendis, explicabo, in magni laudantium mollitia quisquam error nostrum commodi dolor veniam recusandae">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_almir.png" alt="Foto do palestrante Almir"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Almir Filho</h4>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Suissa" data-class="before-1" data-description="Lorem ipsum e tals">
+                        <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Suissa" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_suissa.png" alt="Foto do palestrante Suissa"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Gustavo Costa" data-class="before-2" data-description="Lorem ipsum e tals">
+                        <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Gustavo Costa" data-description="Lorem ipsum e tals">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_gustavo.png" alt="Foto do palestrante Gustavo"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Gustavo Costa</h4>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Jean Carlos Emer" data-class="before-3" data-description="Lorem ipsum e tals">
+                        <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Jean Carlos Emer" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, animi, ex iste eos nihil vel eligendi sapiente sint magni nostrum quas veniam libero est. Explicabo libero laudantium quisquam blanditiis necessitatibus!">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_emer.png" alt="Foto do palestrante Jean Carlo Emer"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Emer</h4>
@@ -157,16 +157,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="row speaker-description arrow-up">
-
-                        <h2 class="name yellow shadow">Almir Filho</h2>
-                        <img src="assets/images/avatares/avatar_almir.png" alt="Almir e tals" class="left">
-                        <p class="description f-16 white">A Associação Atlética Banco do Brasil Aracaju - AABB AJU - está situada na Rod. José Sarney s/n - Praia do Robalo, Aracaju (SE) - Numa área de lazer completa com 02 (dois) campos de futebol society oficial, 01 (um) mini-campo, 02 (duas) quadras poliesportivas, 01 (uma) quadra de tênis, 01 (uma) piscina adulto, 01 (uma) piscina infantil, Belíssimo salão de festas, salão de jog os,churasqueiras coletivas e individuais, 02 (dois) restaurantes, chalés confortáveis ao seu inteiro dispor e muito calor humano...</p>
-
-                    </div>
-
-                    <div class="clearfix"></div>
 
                     <div class="row row-palestrantes" id="second-line-speakers">
                         <div class="col-md-3 col-sm-6 item-palestrante jaydson">

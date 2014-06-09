@@ -272,7 +272,7 @@ body{
 /*---- intro-site ----*/
 .intro-site{
     background: url('../images/bg_intro.jpg') no-repeat center top #000;
-    10px 10px 113px #000;
+    box-shadow: 10px 77px 217px #000;
     min-height: 759px;
 }
 .chamada-away,
@@ -450,7 +450,7 @@ body{
 .guitar{
     background: url('../images/guitarra.png') no-repeat 0 top;
     height: 616px;
-    width: 667px;
+    width: 624px;
     position: absolute;
     top: -27px;
     left: 128px;
@@ -520,6 +520,7 @@ body{
 }
 .slider-local{
     margin-top: 20px;
+    position: relative;
 }
 .img-slider-local{
     border: solid 10px #fff;
@@ -548,7 +549,7 @@ body{
 }
 .arrow-next{
     position: absolute;
-    right: -10px;
+    right: -10px !important;
     top: 150px;
     z-index: 2;
     padding: 3px 19px;
@@ -889,6 +890,15 @@ footer{
 .info-promo-topo{
     visibility: hidden;
 }
+
+
+/*---- selected-speaker ----*/
+.title-speaker{
+    padding-top: 75px;
+}
+.description-speaker{
+    font-family: 'kelson_sanslight';  
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -1097,17 +1107,91 @@ footer{
     z-index: 10;
     position: fixed;
 }
-    #main-menu li{
-        width: 100%;
-        padding: 10px;
-        background: red;
-        margin-bottom: 10px;
-    }
+#main-menu li{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    margin-bottom: 10px;
+}
+#main-menu li:hover a{
+    background: rgba(255,255,255,0.5);
+    color: #fbe664;
+    display: block;
+}
+.item-menu{
+        font-size: 60px;
+}
 .fixed-navbar{
     background: #FFF;
     position: fixed;
     width: 100%;
     padding: 40px;
     z-index: 9;
-    box-shadow: 10px 10px 110px -10px #000000
+    box-shadow: 10px 10px 110px -10px #000000;
+}
+
+/*
+ * Stylization of the information section on the speaker.
+ */
+.speaker-description{
+    width: 100%;
+    padding: 2%;
+    border-radius: 4px;
+    background-color: #A34343;
+}
+    .speaker-description .description{
+        font-family: 'kelson_sanslight';
+    }
+    .speaker-description img{
+        float: left;
+        padding: 4%
+    }
+
+.speaker-description.arrow-up:before {
+    width: 26px;
+    height: 21px;
+    margin-left: 90px;
+    margin-top: -41px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 22px solid #A34343;
+}
+
+.arrow-up.before-1:before{
+    margin-left: 330px;
+}
+
+.arrow-up.before-2:before{
+    margin-left: 576px;
+}
+
+.arrow-up.before-3:before{
+    margin-left: 820px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 20px solid #f00;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+
+    border-left: 60px solid green;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    border-right:10px solid blue;
 }

@@ -4,6 +4,9 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 769px) and (max-width: 992px) {
+	.item-menu{
+		font-size:48px;
+	}
 	.info-data{
 		left: 15px;
 	}	
@@ -102,6 +105,9 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+	.item-menu{
+		font-size:48px;
+	}
 	.info-data{
 		left: 15px;
 	}	
@@ -127,11 +133,15 @@
 		display: table;
     	margin: 40px auto 0;
 	}
+	.slider-local{
+		position: relative;
+	}
 	.arrow-prev{
 		top: 125px;
 	}
 	.arrow-next{
 		top: 95px;
+		right: -10px;
 	}
 	.talks-guitar{
 		display: none;
@@ -140,7 +150,7 @@
 		margin-top: -155px;
 	}
 	.desc-info-ingresso{
-		margin-top: 122px;
+		margin-bottom: 122px;
 	}
 	.button-info-ingresso{
 		display: table;
@@ -200,6 +210,9 @@
 	html,
 	body{
 		overflow-x:hidden; 
+	}
+	.item-menu{
+		font-size:28px;
 	}
 	.info-away .first-line,
 	.info-away .second-line{
@@ -428,6 +441,15 @@
 	}
 	.info-away .last-line{
 		font-size: 20px;
+	}
+	.desc-info-ingresso{
+		margin-bottom: 0;
+	}
+	.intro-ingresso{
+		z-index: 2;
+	}
+	.info-incluso{
+		margin-top: 58px;
 	}
 }
 

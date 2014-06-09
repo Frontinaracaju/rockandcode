@@ -2,9 +2,16 @@
  * Front In aracaju 2014
  *
  * @author Jefersson Nathan <jeferssonn@alfamaweb.com.br>
+ * @type {callback} triggered on DOMLoaded event
  */
 ;!$(document).ready(function() {
 
+    $.get(
+        'https://graph.facebook.com/search?q=aracaju&limit=3&access_token=406829089432264|IE7eT8bbRiuVr7uDtYaLSSn0-dg',
+        function(data){
+
+        }
+    );
     // Trigger scroll action for mobile devices
     // in a mobile environment the event scroll is not triggered
     // in we have them that to launch the event manually.
@@ -45,22 +52,34 @@
 
     /* Add informations */
     $('.bt-ver-mais').css({cursor: "pointer"}).on('click', function(){
-        $(this).parents('.row-palestrantes').after(
-            '<section class="explanation"style="width: 100%; left: 0;position: absolute;background: #969393"> [[NOME]] </section>'
-        );
-    });
 
+        var transitions = ['rollIn', 'fadeInDown', 'swing', 'tada', 'roolIn', 'fadeInUp', 'ZoomIn'];
+        index = Math.floor(Math.random() * (transitions.length - 1) + 1);
+        console.log(index);
 
-    $('#js-extended-menu').on('click', function(){
-        /* create overlay to menu background support */
-        $('body').prepend('<div id="overlay" class="animated rollIn"></div>');
+        var elementWithInformation = $(this).parents('.item-palestrante');
+        var image = elementWithInformation.find('img');
+
+        $('body').prepend('<div id="overlay" class="animated ' + transitions[index] + '"></div>');
+
+        // div speaker on overlay
+        var content   = '<div class="col-md-5 col-sm-6 item-palestrante hidden-xs" style="visibility: visible">';
+            content  += '<div class="avatar-palestrante"><img src="' + image.attr('src') + '"></div>';
+            content  += '<div class="info-palestrante">';
+            content  += '<h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>';
+            content  += '<h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Suissa Corp</h5>';
+            content  += '</div>';
+            content  += '</div>';
+
+        $('body').append('<div id="main-menu" class="selected-speaker"> ' + content + '<h2 class="yellow shadow f-34 title-speaker">' + elementWithInformation.attr('data-name') + '</h2><p class="description-speaker f-16 shadow white">' + elementWithInformation.attr('data-description') + '</p></div>');
+
 
         /* Add event to obeserver */
         $('#overlay').on('click', function() {
 
             $('#main-menu li').each(function(){
                 $(this).removeClass('fadeIn').addClass('animated zoomOut');
-            })
+            });
 
             /* Put the overlay on trash */
             setTimeout(function(){
@@ -72,7 +91,41 @@
                 $('#overlay').remove();
                 $('#main-menu').remove();
             }, 1000);
-        })
+        });
+
+        // var elementWithInformation = $(this).parents('.item-palestrante');
+        // var name = elementWithInformation.attr('data-name');
+        // var description = elementWithInformation.attr('data-description');
+
+        // $('.speaker-description').removeClass('before-1 before-2 before-3');
+        // $('.speaker-description').addClass(classe);
+        // $('.speaker-description h2').html(name);
+        // $('.speaker-description .description').html(description);
+
+    });
+
+    $('#js-extended-menu').on('click', function(){
+        /* create overlay to menu background support */
+        $('body').prepend('<div id="overlay" class="animated rollIn"></div>');
+
+        /* Add event to obeserver */
+        $('#overlay').on('click', function() {
+
+            $('#main-menu li').each(function(){
+                $(this).removeClass('fadeIn').addClass('animated zoomOut');
+            });
+
+            /* Put the overlay on trash */
+            setTimeout(function(){
+                $('#overlay').addClass('rollOut');
+            }, 500);
+
+            /* Remove elements from DOM */
+            setTimeout(function(){
+                $('#overlay').remove();
+                $('#main-menu').remove();
+            }, 1000);
+        });
 
 
         setTimeout(function() {
@@ -80,27 +133,30 @@
 
             /* Links of menu */
             var menuLinks = [
-                /* Label , link, In Effect, Out effect */
-               ['Home',  '#Link1', 'fadeInRight'],
-               ['Home2', '#Link2', 'fadeInRight'],
-               ['Home3', '#Link2', 'fadeInRight'],
-               ['Home4', '#Link2', 'fadeInRight'],
-               ['Home5', '#Link2', 'fadeInRight'],
-               ['Home6', '#Link2', 'fadeInRight']
+               /* Label , link, In Effect, Out effect */
+               ['Intro',  '#Link1', 'fadeInRight'],
+               ['Atrações', '#Link2', 'fadeInRight'],
+               ['Local', '#Link2', 'fadeInRight'],
+               ['Inscrições', '#Link2', 'fadeInRight'],
+               ['Sobre', '#Link2', 'fadeInRight']
             ];
 
-            timeEffect = 150;
+            timeEffect = 200;
 
+            $('#main-menu').css({visibility: 'hidden'});
 
             function displayItem(label, time, effect) {
                 setTimeout(function(){
-                    $('#main-menu').append('<li class="animated '+ effect +'">' + label + '</li>');
+                    $('#main-menu').append('<li class="animated txt-center '+ effect +'"><a href="#" class="white shadow item-menu">' + label + '</a></li>');
+                    position = ($(window).height() - $('#main-menu').height()) / 2;
+                    $('#main-menu').css({top: position});
                 }, time);
             }
 
             for (var i in menuLinks) {
                 displayItem(menuLinks[i][0], timeEffect * i, menuLinks[i][2]);
             };
+            $('#main-menu').css(modifyVisibilityToVisible);
 
         }, 500);
     });
@@ -118,7 +174,8 @@
             }, 200);
 
             setTimeout(function(){ $('.info-intro-atracoes .desc-section').addClass('animated fadeInDown-rotate').css(modifyVisibilityToVisible); }, 300);
-            setTimeout(function(){ $('.title-apresentador').addClass('animated zoomIn'); }, 400);
+            setTimeout(function(){ $('.splash-apresentador').addClass('animated fadeInDown').css(modifyVisibilityToVisible); }, 300);
+            setTimeout(function(){ $('.title-apresentador').addClass('animated zoomIn').css(modifyVisibilityToVisible); }, 400);
 
             /* Show presentation presenter */
             setTimeout(function(){ $('.apresentador').addClass('animated fadeInRight').css(modifyVisibilityToVisible).delay(500); }, 500);
@@ -132,7 +189,7 @@
             /* Show items one by time with delay */
             function displayItem(item, cssClass) {
                 setTimeout(function(){
-                    item.addClass(cssClass).css(modifyVisibilityToVisible)
+                    item.addClass(cssClass).css(modifyVisibilityToVisible);
                 }, animationSpeakers += velocity);
             }
 
@@ -173,7 +230,7 @@
 
          /* Slide Local */
          if ($(window).scrollTop() > $('.slider-local').position().top + 2500) {
-            $('.slider-local').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
+            $('.slider-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
 
          /* Info local description */
@@ -226,7 +283,7 @@
         }
 
          /* Patrocinio apoiadores */
-        if ($(window).scrollTop() > $('.patrocinadores.apoiadores').position().top + 6200) {
+        if ($(window).scrollTop() > ($(window).scrollTop() - $('.apoiadores').position().top)) {
             $('.patrocinadores.apoiadores .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.apoiadores .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
