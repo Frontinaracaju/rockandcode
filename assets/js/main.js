@@ -2,13 +2,13 @@
  * Front In aracaju 2014
  *
  * @author Jefersson Nathan <jeferssonn@alfamaweb.com.br>
- * @type {callback} triggered on DOMLoaded event
+ * @type {callback} DOMLoadedイベントでトリガ
  */
 ;!$(document).ready(function() {
 
-    // Trigger scroll action for mobile devices
-    // in a mobile environment the event scroll is not triggered
-    // in we have them that to launch the event manually.
+    // モバイルデバイス用のトリガスクロールアクション
+    // モバイル環境でのイベントのスクロールがトリガされていません
+    // 我々はそれらを持っている中で、それは手動でイベントを起動します。
     function ScrollStart() {
         $(document).trigger('scroll');
     }
@@ -47,7 +47,7 @@
     /* Add informations */
     $('.bt-ver-mais').css({cursor: "pointer"}).on('click', function(){
 
-        var transitions = ['rollIn', 'fadeInDown', 'swing', 'tada', 'roolIn', 'fadeInUp', 'ZoomIn'];
+        var transitions = ['rollIn', 'swing', 'tada', 'roolIn', 'fadeInUp', 'ZoomIn'];
         index = Math.floor(Math.random() * (transitions.length - 1) + 1);
         console.log(index);
 
@@ -57,21 +57,23 @@
         $('body').prepend('<div id="overlay" class="animated ' + transitions[index] + '"></div>');
 
         // div speaker on overlay
-        var content   = '<div class="col-md-5 col-sm-6 item-palestrante hidden-xs" style="visibility: visible">';
+        var content   = '<div class="col-md-5 col-sm-6 item-palestrante hidden-xs animated zoomIn" style="visibility: visible">';
             content  += '<div class="avatar-palestrante"><img src="' + image.attr('src') + '"></div>';
             content  += '<div class="info-palestrante">';
-            content  += '<h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>';
-            content  += '<h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Suissa Corp</h5>';
+            content  += '<h4 class="title-palestrante white shadow f-26 txt-center">' + elementWithInformation.attr('data-name') + '</h4>';
+            content  += '<h5 class="trabalho-palestrante yellow shadow f-16 txt-center">' + elementWithInformation.attr('data-employer') + '</h5>';
             content  += '</div>';
             content  += '</div>';
 
-        $('body').append('<div id="main-menu" class="selected-speaker"> ' + content + '<h2 class="yellow shadow f-34 title-speaker">' + elementWithInformation.attr('data-name') + '</h2><p class="description-speaker f-16 shadow white">' + elementWithInformation.attr('data-description') + '</p></div>');
+        $('body').append('<div id="main-menu" class="selected-speaker"> ' + content + '<h2 class="yellow shadow f-34 title-speaker animated fadeInLeft">' + elementWithInformation.attr('data-name') + '</h2><p class="description-speaker f-16 shadow white animated fadeInRight">' + elementWithInformation.attr('data-description') + '</p></div>');
 
+        position = ($(window).height() - $('#main-menu').height()) / 2;
+        $('#main-menu').css({top: position});
 
         /* Add event to obeserver */
         $('#overlay').on('click', function() {
 
-            $('#main-menu li').each(function(){
+            $('#main-menu *').each(function(){
                 $(this).removeClass('fadeIn').addClass('animated zoomOut');
             });
 
@@ -119,29 +121,32 @@
             var menuLinks = [
                /* Label , link, In Effect, Out effect */
                ['Intro',  '#Link1', 'fadeInRight'],
-               ['Atrações', '#Link2', 'fadeInRight'],
+               ['Atrações', 'atracoes', 'fadeInRight'],
                ['Local', '#Link2', 'fadeInRight'],
                ['Inscrições', '#Link2', 'fadeInRight'],
                ['Sobre', '#Link2', 'fadeInRight']
             ];
 
-            timeEffect = 200;
+            timeEffect = 150;
 
             $('#main-menu').css({visibility: 'hidden'});
 
-            function displayItem(label, time, effect) {
+            function displayItem(label, time, effect, link) {
                 setTimeout(function(){
-                    $('#main-menu').append('<li class="animated txt-center '+ effect +'"><a href="#" class="white shadow item-menu">' + label + '</a></li>');
-                    position = ($(window).height() - $('#main-menu').height()) / 2;
-                    $('#main-menu').css({top: position});
+                    $('#main-menu').append('<li class="animated txt-center '+ effect +'"><a href="#' + link + '" class="white shadow item-menu">' + label + '</a></li>');
+
+                    if('Sobre' == label) {
+                        position = ($(window).height() - $('#main-menu').height()) / 2;
+                        $('#main-menu').css({top: position});
+                        $('#main-menu').css(modifyVisibilityToVisible);
+                    }
+
                 }, time);
             }
 
             for (var i in menuLinks) {
-                displayItem(menuLinks[i][0], timeEffect * i, menuLinks[i][2]);
+                displayItem(menuLinks[i][0], timeEffect * i, menuLinks[i][2], menuLinks[i][1]);
             };
-            $('#main-menu').css(modifyVisibilityToVisible);
-
         }, 500);
     });
 
@@ -297,11 +302,6 @@
             setTimeout(function() {
                 $('.novidades').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             }, 400);
-        }
-
-        /*  */
-        if ($(window).scrollTop() > $('.o-que-falam').position().top - 300) {
-            // '.o-que-falam'
         }
     });
 });

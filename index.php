@@ -5,12 +5,38 @@
     <meta charset="UTF-8">
     <title>Rock and Code - Front in Aracaju</title>
 </head>
-
 <body>
 	<?php include '_chromeframe.php'; ?>
     <div class="wrapper" style="opacity: 0">
         <!-- <audio src="assets/audio/audio.mp3" id="intro-sound" autoplay="autoplay"></audio> -->
-    	<div class="intro-site">
+    	<div class="fixed-menu hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo-fia"><img src="assets/images/frontinaracaju.png" alt="logo front in aracaju"></div>
+                        <div class="menu-social">
+                            <nav class="main-menu">
+                                <ul>
+                                    <li class="item-menu-fixed"><a href"#" class="white shadow f-20">Intro</a></li>
+                                    <li class="item-menu-fixed"><a href"#" class="white shadow f-20">Atrações</a></li>
+                                    <li class="item-menu-fixed"><a href"#" class="white shadow f-20">Local</a></li>
+                                    <li class="item-menu-fixed"><a href"#" class="white shadow f-20">Inscrições</a></li>
+                                    <li class="item-menu-fixed item-last"><a href"#" class="white shadow f-20">Sobre</a></li>
+                                </ul>
+                            </nav>
+                            <ul class="redes-fixed">
+                                <li class="item-redes-fixed"><a href="https://www.facebook.com/frontinaracaju" target="_blank"><img src="assets/images/icon_fixed_face.png" alt="ícone facebook"></a></li>
+                                <li class="item-redes-fixed"><a href="https://twitter.com/frontinaracaju" target="_blank"><img src="assets/images/icon_fixed_twitter.png" alt="ícone twitter"></a></li>
+                                <li class="item-redes-fixed"><a href="https://github.com/Frontinaracaju/rockandcode" target="_blank"><img src="assets/images/icon_fixed_github.png" alt="ícone github"></a></li>
+                                <li class="item-redes-fixed item-last"><a href="mailto:contato@frontinaracaju.com.br" target="_blank"><img src="assets/images/icon_fixed_email.png" alt="ícone contato"></a></li>
+                            </ul>
+                            <a class="button-inscreva-fixed button-green f-14 radius" href="http://www.eventick.com.br/rockandcode" target="_blank">Inscreva-se já!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="intro-site">
     		<header>
     			<div class="container">
     				<div class="row">
@@ -72,14 +98,14 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12 button-info-promo">
-                            <a class="button-inscreva-topo button-green f-40 radius" href="#" style="display:none;">Inscreva-se já!</a>
+                            <a class="button-inscreva-topo button-green f-40 radius" href="http://www.eventick.com.br/rockandcode" target="_blank" style="display:none;">Inscreva-se já!</a>
                             <span class="info-promo-topo white shadow f-12"><span class="yellow">Camisa Grátis</span> - 100 primeiros inscritos</span>
                         </div>
                     </div>
                 </div>
             </header>
-        </div>
-        <section class="atracoes">
+        </section>
+        <section class="atracoes" rel="atracoes">
             <div class="intro-section intro-atracoes">
                 <div class="container">
                     <div class="row">
@@ -281,11 +307,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="slider-local">
-                                <a id="prev" class="button-slider arrow-prev f-40 hidden-xs" href="javascript:void();"><</a>
                                 <div class="lista-imagens-local">
                                     <img src="assets/images/slider-local/img-1.jpg" class="img-slider-local">
                                 </div>
-                                <a id="next" class="button-slider arrow-next f-40 hidden-xs" href="javascript:void();">></a>
                             </div>
                             <div class="info-local">
                                 <div class="title-local f-34 txt-center">AABB- Aracaju/SE</div>
@@ -345,7 +369,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 <div class="info-desconto f-14">*Caso tenha interesse em comprar mais de 4 ingressos, entre em contato pelo e-mail <a href="mailto:contato@frontinaracaju.com.br" class="email-fia">contato@frontinaracaju.com.br</a>  para solicitar o seu desconto .</div>
                             </div>
                             <div class="button-info-ingresso">
-                                <a class="button-inscreva-ingresso button-green f-40 radius" href="#">Inscreva-se já!</a>
+                                <a class="button-inscreva-ingresso button-green f-40 radius" href="http://www.eventick.com.br/rockandcode" target="_blank">Inscreva-se já!</a>
                                 <h4 class="info-lote-ingresso yellow f-12 txt-center shadow">2º Lote de Ingressos  -  <span class="white">R$: 125,00<span></h4>
                             </div>
                         </div>
@@ -459,6 +483,7 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                         <div class="desc-falam white f-16 white shadow txt-center">Apareça aqui também utilizando <span class="yellow">#rockandcode</span> ou <span class="yellow">#frontinaracaju</span>.</div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="com-md-12">
                         <div class="lista-avatares">
@@ -545,9 +570,9 @@ piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras 
                                 <h4 class="title-organizador yellow shadow f-26">Júlio Cézar</h4>
                                 <h5 class="funcao-organizador white shadow f-12">Front-end Developer</h5>
                                 <div class="redes-organizador">
-                                    <div class="email icon-rede"><a href="mailto:italowaxman@gmail.com" title="E-mail"><img src="assets/images/icon_redes_mail.png" alt="icone e-mail" class="icon-mail"></a></div>
-                                    <div class="twitter icon-rede"><a href="https://twitter.com/italowaxman" title="Twitter"><img src="assets/images/icon_redes_twitter.png" alt="icone twitter" class="icon-twitter"></a></div>
-                                    <div class="facebook icon-rede"><a href="https://www.facebook.com/italowaxman" title="Facebook"><img src="assets/images/icon_redes_facebook.png" alt="icone facebook" class="icon-face"></a></div>
+                                    <div class="email icon-rede"><a href="mailto:cezinhajc@gmail.com" title="E-mail"><img src="assets/images/icon_redes_mail.png" alt="icone e-mail" class="icon-mail"></a></div>
+                                    <div class="twitter icon-rede"><a href="https://twitter.com/cezinhajc" title="Twitter"><img src="assets/images/icon_redes_twitter.png" alt="icone twitter" class="icon-twitter"></a></div>
+                                    <div class="facebook icon-rede"><a href="https://www.facebook.com/CEZINHAJC" title="Facebook"><img src="assets/images/icon_redes_facebook.png" alt="icone facebook" class="icon-face"></a></div>
                                 </div>
                             </div>
                         </div>

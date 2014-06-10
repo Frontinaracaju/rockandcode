@@ -269,6 +269,52 @@ body{
 	max-width:970px;
 }
 
+/*---- fixed-menu ----*/
+.fixed-menu{
+  background: url('../images/bg_fixed_bar.png') no-repeat center top;  
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.logo-fia{
+    float: left;
+    margin-top: 5px;
+}
+.main-menu,
+.redes-fixed,
+.button-inscreva-fixed{
+    float: left;
+    padding: 0;
+}
+.main-menu,
+.redes-fixed{
+    margin-right: 15px;
+}
+.menu-social{
+    float: right;
+    margin-top: 8px;
+}
+.item-menu-fixed{
+    float: left;
+    margin-right: 20px;
+    line-height: 36px;
+}
+.item-menu-fixed:hover a{
+    color: #fbe664;    
+}
+.button-inscreva-fixed{
+    padding: 6px 14px;
+}
+.item-redes-fixed{
+    float: left;
+    margin-right: 5px;
+    line-height: 34px;
+}
+.item-last{
+    margin-right: 0;
+}
 /*---- intro-site ----*/
 .intro-site{
     background: url('../images/bg_intro.jpg') no-repeat center top #000;
