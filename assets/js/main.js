@@ -6,12 +6,25 @@
  */
 ;!$(document).ready(function() {
 
-    // モバイルデバイス用のトリガスクロールアクション
-    // モバイル環境でのイベントのスクロールがトリガされていません
-    // 我々はそれらを持っている中で、それは手動でイベントを起動します。
     function ScrollStart() {
         $(document).trigger('scroll');
     }
+
+    /* Twitter fallback */
+    $.get('http://www.alfama.web0800.com.br/', function(data){
+        tweets = JSON.parse(data);
+
+        loop = 1;
+        for (var i in tweets) {
+            console.log(loop);
+            $('.item-falam:nth-child(' + loop + ') .txt-item-falam').html(tweets[i].text);
+            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.nome-avatar').html(tweets[i].user.name);
+            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.usuario-avatar').html('@' + tweets[i].user.screen_name);
+            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.avatar img').attr('src', tweets[i].user.profile_image_url);
+            loop += 1;
+        }
+    });
+
 
     /* register function on observer */
     document.addEventListener("touchmove", ScrollStart, false);
@@ -120,11 +133,10 @@
             /* Links of menu */
             var menuLinks = [
                /* Label , link, In Effect, Out effect */
-               ['Intro',  '#Link1', 'fadeInRight'],
-               ['Atrações', 'atracoes', 'fadeInRight'],
-               ['Local', '#Link2', 'fadeInRight'],
-               ['Inscrições', '#Link2', 'fadeInRight'],
-               ['Sobre', '#Link2', 'fadeInRight']
+               ['Atrações', '$(\'html,body\').animate({scrollTop: $(\'.atracoes\').offset().top - 70}, 1500);', 'fadeInRight'],
+               ['Local', '$(\'html,body\').animate({scrollTop: $(\'.local-evento\').offset().top - 70}, 1500);', 'fadeInRight'],
+               ['Inscrições', '$(\'html,body\').animate({scrollTop: $(\'.ingresso\').offset().top - 70}, 1500);', 'fadeInRight'],
+               ['Sobre', '$(\'html,body\').animate({scrollTop: $(\'.sobre\').offset().top - 70}, 1500);', 'fadeInRight']
             ];
 
             timeEffect = 150;
@@ -133,7 +145,7 @@
 
             function displayItem(label, time, effect, link) {
                 setTimeout(function(){
-                    $('#main-menu').append('<li class="animated txt-center '+ effect +'"><a href="#' + link + '" class="white shadow item-menu">' + label + '</a></li>');
+                    $('#main-menu').append('<li class="animated txt-center '+ effect +'"><a onclick="$(\'#overlay\').trigger(\'click\'); setTimeout(function(){ ' + link + ' }, 800);" class="white shadow item-menu pointer">' + label + '</a></li>');
 
                     if('Sobre' == label) {
                         position = ($(window).height() - $('#main-menu').height()) / 2;
@@ -150,10 +162,24 @@
         }, 500);
     });
 
+    function markMenuItem(markItem) {
+        $('.item-menu-fixed').removeClass('current-item');
+        $('.item-menu-fixed:nth-child(' + markItem + ')').addClass('current-item');
+    };
+
     /* Scroll */
     $(window).scroll(function() {
+
+        /* Hide and show topbar */
+        if ($(window).scrollTop() > $('.atracoes').position().top - 100) {
+            $('.fixed-menu').removeClass('fadeOutUp').addClass('animated fadeInDown').show();
+        } else {
+            $('.fixed-menu').removeClass('fadeInDown').addClass('animated fadeOutUp');
+        }
+
         /* `Atrações` animation */
         if ($(window).scrollTop() > $('.intro-atracoes').position().top - 300) {
+            markMenuItem(2);
             $('.intro-atracoes').addClass('animated fadeIn').css(modifyVisibilityToVisible);
             $('.img-intro-atacoes').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
 
@@ -207,6 +233,7 @@
 
         /* Location */
         if ($(window).scrollTop() > $('.local-evento').position().top - 400) {
+            markMenuItem(3);
             $('.local-evento').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             setTimeout(function() {$('.img-intro-local').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);}, 1200);
 
@@ -228,6 +255,7 @@
          }
 
          if ($(window).scrollTop() > $('.intro-ingresso').position().top - 200) {
+            markMenuItem(4);
             $('.intro-ingresso').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
 
             setTimeout(function() {$('.img-intro-ingresso').addClass('animated tada').css(modifyVisibilityToVisible);}, 800);
@@ -279,6 +307,7 @@
 
         /* About */
         if ($(window).scrollTop() > $('.intro-sobre').position().top - 400) {
+            markMenuItem(5);
             $('.intro-sobre').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
 
             setTimeout(function() {$('.img-intro-sobre').addClass('animated flipInY').css(modifyVisibilityToVisible);}, 800);
@@ -298,7 +327,7 @@
         }
 
         /* Novidades */
-        if ($(window).scrollTop() > $('.novidades').position().top - 300) {
+        if ($(window).scrollTop() > $('.novidades').position().top - 400) {
             setTimeout(function() {
                 $('.novidades').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             }, 400);

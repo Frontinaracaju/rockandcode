@@ -271,7 +271,7 @@ body{
 
 /*---- fixed-menu ----*/
 .fixed-menu{
-  background: url('../images/bg_fixed_bar.png') no-repeat center top;  
+  background: url('../images/bg_fixed_bar.png') no-repeat center top;
   width: 100%;
   height: 72px;
   position: fixed;
@@ -302,7 +302,7 @@ body{
     line-height: 36px;
 }
 .item-menu-fixed:hover a{
-    color: #fbe664;    
+    color: #fbe664;
 }
 .button-inscreva-fixed{
     padding: 6px 14px;
@@ -744,6 +744,9 @@ body{
     margin-left: 35px;
     clear: both;
 }
+.desc-sobre .forth-line{
+    margin-left: 18px;
+}
 .desc-sobre .last-line{
     margin-left: -40px;
 }
@@ -809,7 +812,7 @@ body{
 }
 .item-falam .avatar{
     background: url('../images/bg_avatar_falam.png') no-repeat center top;
-    height: 71px;
+    height: 81px;
     float: left;
 }
 .info-item-falam{
@@ -821,6 +824,7 @@ body{
     float: left;
     margin-left: 10px;
     margin-top: 51px;
+    width: 63px;
 }
 .title-nome-falam{
     float: left;
@@ -838,7 +842,7 @@ body{
     top: 60px;
     width: 226px;
     z-index: 1;
-    padding: 10px;
+    padding: 5px 10px;
     font-family: 'kelson_sanslight';
 }
 .txt-item-falam .hashtag{
@@ -943,7 +947,7 @@ footer{
     padding-top: 75px;
 }
 .description-speaker{
-    font-family: 'kelson_sanslight';  
+    font-family: 'kelson_sanslight';
 }
 /* ==========================================================================
    Helper classes
@@ -1164,6 +1168,11 @@ footer{
     color: #fbe664;
     display: block;
 }
+.current-item a{
+    color: #fbe664;
+    display: block;
+}
+
 .item-menu{
         font-size: 60px;
 }
@@ -1240,4 +1249,7 @@ footer{
     border-bottom: 10px solid transparent;
 
     border-right:10px solid blue;
+}
+.pointer{
+    cursor: pointer;
 }
