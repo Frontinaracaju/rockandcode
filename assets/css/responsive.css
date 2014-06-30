@@ -112,7 +112,7 @@
 		font-size:48px;
 	}
 	.item-menu-fixed a{
-		font-size: 16px;
+		font-size: 15px;
 	}
 	.info-data{
 		left: 15px;
@@ -441,6 +441,9 @@
 		float: none;
 		text-align: center;
 		font-size: 30px;
+	}
+	.ouro .patrocinador, .prata .patrocinador, .bronze .patrocinador, .apoiadores .patrocinador{
+		margin: 0 0 30px;
 	}
 }
 

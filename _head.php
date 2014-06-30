@@ -11,7 +11,7 @@
     	
         <!-- Facebook Tags -->
 		<meta property="og:description" content="Um evento repleto de código e rock n’ roll dia 02 de Agosto. Front-end + rock = Combinação Explosiva!">
-		<meta property="og:image" content="http://www.frontinaracaju.com.br/assets/img/thumbnail.png">
+		<meta property="og:image" content="http://www.frontinaracaju.com.br/assets/images/thumbnail.png">
 		<meta property="og:site_name" content="Front in Aracaju">
 		<meta property="og:title" content="Front in Aracaju - Rock and Code">
 		<meta property="og:type" content="website">
@@ -23,7 +23,7 @@
 		<meta name="twitter:creator" content="@frontinaracaju">
 		<meta name="twitter:title" content="Front in Aracaju - Rock and Code">
 		<meta name="twitter:description" content="Um evento repleto de código e rock n’ roll dia 02 de Agosto. Front-end + rock = Combinação Explosiva!">
-		<meta name="twitter:image" content="http://www.frontinaracaju.com.br/assets/img/thumbnail.png">
+		<meta name="twitter:image" content="http://www.frontinaracaju.com.br/assets/images/thumbnail.png">
     	
         <!-- Humans -->
         <link rel="author" href="humans.txt" />

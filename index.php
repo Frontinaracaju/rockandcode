@@ -8,7 +8,7 @@
 <body>
 	<?php include '_chromeframe.php'; ?>
     <div class="wrapper" style="opacity: 0">
-        <!-- <audio src="assets/audio/audio.mp3" id="intro-sound" autoplay="autoplay"></audio> -->
+        <audio src="assets/audio/audio.mp3" id="intro-sound"></audio>
         <div class="fixed-menu" style="display: none">
             <div class="container">
                 <div class="row">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <section class="intro-site">
+        <section class="intro-site" itemscope itemtype="http://schema.org/Event">
           <header>
              <div class="container">
                 <div class="row">
@@ -67,10 +67,11 @@
                     <span class="data white shadow f-48">02</span><br>
                     <span class="mes yellow shadow f-28">Agosto</span><br>
                     <span class="ano cream shadow f-20">2014</span>
+                    <span itemprop="name" content="Rock and Code"/>
                 </div>
             </div>
             <div class="col-sm-4 info-left visible-xs">
-                <div class="info-data" >
+                <div class="info-data" itemprop="startDate" content="2014-08-02T08:00">
                     <span class="data white shadow f-36">02</span>
                     <span class="mes yellow shadow f-36">Agosto</span>
                     <span class="ano cream shadow f-36">2014</span>
@@ -81,10 +82,10 @@
                 <h1 class="logo"><a href=""><img src="assets/images/rockandcode.png" alt="Logo Rock and Code"></a></h1>
             </div>
             <div class="col-sm-4  info-right">
-                <div class="info-local-valor" style="display:none;">
+                <div class="info-local-valor" style="display:none;" itemscope itemtype="http://schema.org/Offer">
                     <span class="local white shadow f-48">AABB</span><br>
                     <span class="cidade cream shadow f-28">Aracaju/SE</span><br>
-                    <span class="valor yellow shadow f-20">R$: 125,00</span>
+                    <span class="valor yellow shadow f-20" itemprop="price">R$: 125,00</span>
                 </div>
             </div>
         </div>
@@ -97,8 +98,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-12 button-info-promo">
-                <a class="button-inscreva-topo button-green f-40 radius" href="http://www.eventick.com.br/rockandcode" target="_blank" style="display:none;">Inscreva-se já!</a>
+            <div class="col-sm-12 button-info-promo" itemscope itemtype="http://schema.org/Offer">
+                <a class="button-inscreva-topo button-green f-40 radius" itemprop="url" href="http://www.eventick.com.br/rockandcode" target="_blank" style="display:none;">Inscreva-se já!</a>
                 <span class="info-promo-topo white shadow f-12"><span class="yellow">Camisa Grátis</span> - 100 primeiros inscritos</span>
             </div>
         </div>
@@ -133,7 +134,7 @@
                                 <span class="first-line white shadow f-34">Apresentador</span><br>
                                 <span class="second-line yellow shadow f-34">do evento</span>
                             </h3>
-                            <div class="apresentador">
+                            <div class="apresentador" data-name="It's Show Time" data-description="Será um prazer ser o host dessa segunda edição do #FIA ao som de muito rock'n roll. Sou fundador da Caravana Web, Mozillian, Organizador do GDG Maceió e representante da BrazilJS Foundation em Alagoas.">
                                 <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_juarez.png" alt="Foto do palestrante Juarez"></div>
                                 <div class="info-palestrante">
                                     <h4 class="title-palestrante white shadow f-26 txt-center">Juarez Filho</h4>
@@ -147,16 +148,16 @@
             </div>
 
             <div class="row row-palestrantes" id="first-line-speakers">
-                <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Almir Filho" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nemo, numquam molestiae omnis assumenda quas amet impedit dicta labore ut repudiandae et voluptatum maiores. Saepe aspernatur eveniet enim minima quibusdam?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, perferendis, explicabo, in magni laudantium mollitia quisquam error nostrum commodi dolor veniam recusandae">
+                <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Web Audio Hero" data-description="Desvendaremos esta API de alto nível para processamento e sintetização de áudio em aplicações web: A API Web Audio – que nos permitirá quebrar o silêncio da web sem limitações.">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_almir.png" alt="Foto do palestrante Almir"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Almir Filho</h4>
                         <h5 class="trabalho-palestrante yellow shadow f-16 txt-center yellow shadow f-16 txt-center">Globo.com</h5>
-                        <div class="bt-ver-mais f-20 f-20">+</div>
+                        <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Suissa" data-description="Lorem ipsum e tals">
+                <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Atomic Design" data-description="Aprenda essa nova metodologia para organizar seu CSS, onde ele não diz como escrever, mas sim como organizar. Obviamente com algumas pitadas de pré-processador e Física Quântica ;)">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_suissa.png" alt="Foto do palestrante Suissa"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>
@@ -165,16 +166,16 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Gustavo Costa" data-description="Lorem ipsum e tals">
+                <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Máximo de performance com apps Híbridos" data-description="Mostrarei dicas, problemas com soluções reais que sempre enfrentamos ao desenvolver apps híbridos com Cordova/PhoneGap  para você atingir o máximo de performance e a melhor experiência para você entregar um produto fantástico para seu usuário.">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_gustavo.png" alt="Foto do palestrante Gustavo"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Gustavo Costa</h4>
-                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Globo.com</h5>
+                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Tonails</h5>
                         <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Jean Carlos Emer" data-description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, animi, ex iste eos nihil vel eligendi sapiente sint magni nostrum quas veniam libero est. Explicabo libero laudantium quisquam blanditiis necessitatibus!">
+                <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Controle de fluxo com execução assíncrona" data-description="Analise callbacks, seus mitos e suas reais limitações. Referenciando as promises e generators. ">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_emer.png" alt="Foto do palestrante Jean Carlo Emer"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Emer</h4>
@@ -185,7 +186,7 @@
             </div>
 
             <div class="row row-palestrantes" id="second-line-speakers">
-                <div class="col-md-3 col-sm-6 item-palestrante jaydson">
+                <div class="col-md-3 col-sm-6 item-palestrante jaydson" data-name="...And ES6 For All" data-description="O JavaScript, assim como algumas boas bandas de Rock, foi subestimado por muito tempo. Nessa talk, abordaremos um pouco da história da linguagem, as principais novas features, benefícios e como usar a nova versão da ECMAScript, a.k.a, Harmony/ES6  hoje mesmo em produção! ">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_jaydson.png" alt="Foto do palestrante Jaydson"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jaydson Gomes</h4>
@@ -194,7 +195,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante davidson">
+                <div class="col-md-3 col-sm-6 item-palestrante davidson" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_davidson.png" alt="Foto do palestrante Davidson"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Davidson Fellipe</h4>
@@ -203,20 +204,20 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante vanessa">
-                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_vanessa.png" alt="Foto do palestrante Vanessa"></div>
+                <div class="col-md-3 col-sm-6 item-palestrante felipe" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_felipe.png" alt="Foto do palestrante Felipe"></div>
                     <div class="info-palestrante">
-                        <h4 class="title-palestrante white shadow f-26 txt-center">Vanessa Tonini</h4>
-                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">W3c Brasil</h5>
+                        <h4 class="title-palestrante white shadow f-26 txt-center">Felipe Nascimento</h4>
+                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Terra Networks</h5>
                         <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante fabio">
-                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_fabio.png" alt="Foto do palestrante Fabio"></div>
+                <div class="col-md-3 col-sm-6 item-palestrante reinaldo" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_reinaldo.png" alt="Foto do palestrante Reinaldo"></div>
                     <div class="info-palestrante">
-                        <h4 class="title-palestrante white shadow f-26 txt-center">Fábio Magnoni</h4>
-                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Mozilla</h5>
+                        <h4 class="title-palestrante white shadow f-26 txt-center">Reinaldo Ferraz</h4>
+                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">W3c Brasil</h5>
                         <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
@@ -238,20 +239,20 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-xs-6 item-lightning davidson">
-                            <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_aguarde.png" alt="Foto do palestrante à decidir"></div>
+                        <div class="col-xs-6 item-lightning igor" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                            <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_igor.png" alt="Foto do palestrante Igor"></div>
                             <div class="info-palestrante">
-                                <h4 class="title-palestrante white shadow f-20 txt-center">Davidson Fellipe</h4>
-                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Globo.com</h5>
+                                <h4 class="title-palestrante white shadow f-20 txt-center">Igor Cruz</h4>
+                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Behold</h5>
                                 <div class="bt-ver-mais f-16">+</div>
                             </div>
                         </div>
 
-                        <div class="col-xs-6 item-lightning davidson">
+                        <div class="col-xs-6 item-lightning" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_aguarde.png" alt="Foto do palestrante à decidir"></div>
                             <div class="info-palestrante">
-                                <h4 class="title-palestrante white shadow f-20 txt-center">Davidson Fellipe</h4>
-                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Globo.com</h5>
+                                <h4 class="title-palestrante white shadow f-20 txt-center">Aguardando</h4>
+                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Resultado da votação</h5>
                                 <div class="bt-ver-mais f-16">+</div>
                             </div>
                         </div>
@@ -275,9 +276,9 @@
                     <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="platina">Platinum</span></h3>
                     <div class="lista-patrocinadores">
                         <div class="row">
-                            <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                            <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                            <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                            <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.w3c.br/Home/WebHome" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-w3c.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                            <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.nic.br/index.shtml" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-nic.png" alt="logo nic.br" class="logo-patrocinio"></a></div>
+                            <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.cgi.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-cgi.png" alt="logo cgi.br" class="logo-patrocinio"></a></div>
                         </div>
                     </div>
                 </div>
@@ -316,8 +317,8 @@
                         <div class="info-local f-16 white txt-center">A Associação Atlética Banco do Brasil Aracaju - AABB AJU - está situada na Rod. José Sarney s/n - Praia do Robalo, Aracaju (SE) - Numa área de lazer completa com 02 (dois) campos de futebol society oficial, 01 (um) mini-campo, 02 (duas) quadras poliesportivas, 01 (uma) quadra de tênis, 01 (uma) piscina adulto, 01 (uma)
                             piscina infantil, Belíssimo salão de festas, salão de jog   os,churasqueiras coletivas e individuais, 02 (dois) restaurantes, chalés confortáveis ao seu inteiro dispor e muito calor humano...</div>
                             <div class="buttons-local">
-                                <a class="button-info button-yellow radius f-20">Mais Informações</a>
-                                <a class="button-mapa button-yellow radius f-20">Como Chegar</a>
+                                <a class="button-info button-yellow radius f-20" href="https://www.facebook.com/aabb.aracaju" target="_blank">Mais Informações</a>
+                                <a class="button-mapa button-yellow radius f-20" href="https://goo.gl/maps/4imSc" target="_blank">Como Chegar</a>
                             </div>
                         </div>
                     </div>
@@ -331,11 +332,9 @@
                         <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="yellow">Ouro</span></h3>
                         <div class="lista-patrocinadores">
                             <div class="row">
-                                <div class="col-sm-2 col-xs-6 patrocinador patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.sebrae.com.br/sites/PortalSebrae/ufs/se?codUf=27" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-sebrae.png" alt="logo sebrae" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.se.iel.org.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-iel.png" alt="logo iel" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://alfamaweb.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-alfama.png" alt="logo alfmaweb" class="logo-patrocinio"></a></div>
                             </div>
                         </div>
                     </div>
@@ -383,11 +382,9 @@
                         <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="silver">Prata</span></h3>
                         <div class="lista-patrocinadores">
                             <div class="row">
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://site.unit.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-unit.png" alt="logo unit" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://behold.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-behold.png" alt="logo behold" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="https://www.facebook.com/GoLifeCompany?fref=ts" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-golife.png" alt="logo golife" class="logo-patrocinio"></a></div>
                             </div>
                         </div>
                     </div>
@@ -425,7 +422,7 @@
                             <p class="forth-line txt-sobre cream shadow f-16">Um dos diferenciais do evento, além de uma integração tecnológica inédita no estado de Sergipe, é o local onde será realizado. A Associação Atlética Banco do Brasil – AABB, localizado a 500 metros do mar, é um local amplo, arejado e com uma vista privilegiada, propondo aos participantes do evento um ambiente aconchegante, natural, com contato direto com a natureza e com um dos melhores bares e restaurantes da cidade.</p>
                             <p class="last-line txt-sobre white shadow f-20">02 de Agosto será um dia repleto de código e rock n’ roll.<br> Front-end + Rock = Combinação Explosiva!</p>
                         </div>
-                        <a class="button-fotos-anterior button-yellow f-26 radius" href="#">Fotos da Edição 2013</a>
+                        <a class="button-fotos-anterior button-yellow f-26 radius" href="https://www.flickr.com/photos/101258305@N05/sets/72157635421414400/" target="_blank">Fotos da Edição 2013</a>
                     </div>
                 </div>
             </div>
@@ -465,12 +462,8 @@
                         <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="brown">Bronze</span></h3>
                         <div class="lista-patrocinadores">
                             <div class="row">
-                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                            </div>
+                                <div class="col-sm-2 col-xs-12  patrocinador"><a href="http://www.globo.com/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-globo.png" alt="logo globo.com" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12  patrocinador"><a href="http://www.xprocess.com.br/novo/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-xprocess.png" alt="logo xprocess" class="logo-patrocinio"></a></div>
                         </div>
                     </div>
                 </div>
@@ -493,8 +486,8 @@
                         <div class="info-item-falam">
                             <div class="avatar"><img src="assets/images/avatar_falam.png" alt="avatar usuario" class="img-avatar"></div>
                             <div class="title-nome-falam">
-                                <h4 class="nome-avatar white shadow f-20 ">Ítalo Waxman</h4>
-                                <h5 class="usuario-avatar yellow shadow f-14 ">@italowaxman</h5>
+                                <h4 class="nome-avatar white shadow f-20 "></h4>
+                                <h5 class="usuario-avatar yellow shadow f-14 "></h5>
                             </div>
                         </div>
                     </div>
@@ -504,8 +497,8 @@
                         <div class="info-item-falam">
                             <div class="avatar"><img src="assets/images/avatar_falam.png" alt="avatar usuario" class="img-avatar"></div>
                             <div class="title-nome-falam">
-                                <h4 class="nome-avatar white shadow f-20 ">Ítalo Waxman</h4>
-                                <h5 class="usuario-avatar yellow shadow f-14 ">@italowaxman</h5>
+                                <h4 class="nome-avatar white shadow f-20 "></h4>
+                                <h5 class="usuario-avatar yellow shadow f-14 "></h5>
                             </div>
                         </div>
                     </div>
@@ -515,8 +508,8 @@
                         <div class="info-item-falam">
                             <div class="avatar"><img src="assets/images/avatar_falam.png" alt="avatar usuario" class="img-avatar"></div>
                             <div class="title-nome-falam">
-                                <h4 class="nome-avatar white shadow f-20 ">Ítalo Waxman</h4>
-                                <h5 class="usuario-avatar yellow shadow f-14 ">@italowaxman</h5>
+                                <h4 class="nome-avatar white shadow f-20 "></h4>
+                                <h5 class="usuario-avatar yellow shadow f-14 "></h5>
                             </div>
                         </div>
                     </div>
@@ -528,13 +521,14 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-patrocinadores shadow white f-34">Apoiadores do Evento</h3>
-                        <div class="lista-patrocinadores">
+                        <div class="lista-patrocinadores col-md-12">
                             <div class="row">
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-6 patrocinador"><a href="#"><img src="assets/images/logo-patrocinio.png" alt="logo w3c" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="https://www.facebook.com/groups/caravanaweb/?fref=ts" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-caravana.png" alt="logo caravanaweb" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="http://braziljs.org/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-braziljs.png" alt="logo braziljs" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="http://www.eventick.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-eventick.png" alt="logo eventick" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="http://www.treinaweb.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-treinaweb.png" alt="logo treinaweb" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="http://novatec.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-novatec.png" alt="logo novatec" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6 patrocinador apoiador"><a href="https://www.facebook.com/CoveramaAracaju?fref=ts" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-coverama.png" alt="logo coverama" class="logo-patrocinio"></a></div>
                             </div>
                         </div>
                     </div>

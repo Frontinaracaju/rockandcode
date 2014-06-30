@@ -2,31 +2,58 @@
  * Front In aracaju 2014
  *
  * @author Jefersson Nathan <jeferssonn@alfamaweb.com.br>
- * @type {callback} DOMLoadedイベントでトリガ
+ * @type {callback} DOMLoaded
  */
 ;!$(document).ready(function() {
+
+    window.onload = function() {
+
+        setTimeout(function(){
+
+            $('html,body').animate({scrollTop: window.scrollY- 1}, 1);
+
+            document.getElementById('intro-sound').play();
+            assertPreConditions();
+        }, 1000);
+    };
+});
+
+
+function assertPreConditions() {
 
     function ScrollStart() {
         $(document).trigger('scroll');
     }
 
+    /* Remove LightBox Overlay */
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            if ($('#overlay').length) {
+                $('#overlay').trigger('click');
+            }
+        }
+    });
+
     /* Twitter fallback */
     $.get('http://www.alfama.web0800.com.br/', function(data){
-        tweets = JSON.parse(data);
 
-        loop = 1;
-        for (var i in tweets) {
-            $('.item-falam:nth-child(' + loop + ') .txt-item-falam').html(tweets[i].text);
-            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.nome-avatar').html(tweets[i].user.name);
-            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.usuario-avatar').html('@' + tweets[i].user.screen_name);
-            $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.avatar img').attr('src', tweets[i].user.profile_image_url);
-            loop += 1;
-        }
+        try{
+            tweets = JSON.parse(data);
+
+            loop = 1;
+            for (var i in tweets) {
+                $('.item-falam:nth-child(' + loop + ') .txt-item-falam').html(tweets[i].text);
+                $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.nome-avatar').html(tweets[i].user.name);
+                $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.usuario-avatar').html('@' + tweets[i].user.screen_name);
+                $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.avatar img').attr('src', tweets[i].user.profile_image_url);
+                loop += 1;
+            }
+        } catch(e) {}
     });
 
 
     /* register function on observer */
-    document.addEventListener("touchmove", ScrollStart, false);
+    document.addEventListener('touchmove', ScrollStart, false);
 
     /* Used to modify rendered elements visibility to `visible` */
     modifyVisibilityToVisible = {"visibility": "visible"};
@@ -63,17 +90,32 @@
         index = Math.floor(Math.random() * (transitions.length - 1) + 1);
         console.log(index);
 
-        var elementWithInformation = $(this).parents('.item-palestrante');
+        if ($(this).parents('.item-palestrante').length) {
+            var elementWithInformation = $(this).parents('.item-palestrante');
+            var bg = 'col-md-5 col-sm-6 item-palestrante';
+            var customStyle = '';
+        } else if ($(this).parents('.apresentador').length) {
+            var elementWithInformation = $(this).parents('.apresentador');
+            var bg = 'apresentador col-xs-6';
+            var customStyle = 'background-position: 55% -3px;';
+        } else if ($(this).parents('.item-lightning').length) {
+            var elementWithInformation = $(this).parents('.item-lightning');
+            var bg = 'item-lightning col-xs-6';
+            var customStyle = 'background-position: 55% -3px;';
+        }
+
+        var name = elementWithInformation.find('h4').html();
+        var employer = elementWithInformation.find('h5').html();
         var image = elementWithInformation.find('img');
 
         $('body').prepend('<div id="overlay" class="animated ' + transitions[index] + '"></div>');
 
         // div speaker on overlay
-        var content   = '<div class="col-md-5 col-sm-6 item-palestrante hidden-xs animated zoomIn" style="visibility: visible">';
+        var content   = '<div class="' + bg + ' hidden-xs animated zoomIn" style="visibility: visible; ' + customStyle + '">';
             content  += '<div class="avatar-palestrante"><img src="' + image.attr('src') + '"></div>';
             content  += '<div class="info-palestrante">';
-            content  += '<h4 class="title-palestrante white shadow f-26 txt-center">' + elementWithInformation.attr('data-name') + '</h4>';
-            content  += '<h5 class="trabalho-palestrante yellow shadow f-16 txt-center">' + elementWithInformation.attr('data-employer') + '</h5>';
+            content  += '<h4 class="title-palestrante white shadow f-26 txt-center">' + name + '</h4>';
+            content  += '<h5 class="trabalho-palestrante yellow shadow f-16 txt-center">' + employer + '</h5>';
             content  += '</div>';
             content  += '</div>';
 
@@ -103,11 +145,20 @@
     });
 
     $('#js-extended-menu').on('click', function(){
+
+        if ($(this).hasClass('clicked')) {
+            return true;
+        }
+
+        $('#js-extended-menu').addClass('clicked');
+
         /* create overlay to menu background support */
         $('body').prepend('<div id="overlay" class="animated rollIn"></div>');
 
         /* Add event to obeserver */
         $('#overlay').on('click', function() {
+
+            $('#js-extended-menu').removeClass('clicked');
 
             $('#main-menu li').each(function(){
                 $(this).removeClass('fadeIn').addClass('animated zoomOut');
@@ -170,14 +221,14 @@
     $(window).scroll(function() {
 
         /* Hide and show topbar */
-        if ($(window).scrollTop() > $('.atracoes').position().top - 100) {
+        if ($(window).scrollTop() > $('.atracoes').position().top - 250) {
             $('.fixed-menu').removeClass('fadeOutUp').addClass('animated fadeInDown').show();
         } else {
             $('.fixed-menu').removeClass('fadeInDown').addClass('animated fadeOutUp');
         }
 
         /* `Atrações` animation */
-        if ($(window).scrollTop() > $('.intro-atracoes').position().top - 300) {
+        if ($(window).scrollTop() > $('.intro-atracoes').position().top - 350) {
             markMenuItem(2);
             $('.intro-atracoes').addClass('animated fadeIn').css(modifyVisibilityToVisible);
             $('.img-intro-atacoes').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
@@ -185,14 +236,14 @@
             setTimeout(function(){
                 $('.info-intro-atracoes .first-line').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
                 $('.info-intro-atracoes .second-line').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
-            }, 200);
+            }, 100);
 
-            setTimeout(function(){ $('.info-intro-atracoes .desc-section').addClass('animated fadeInDown-rotate').css(modifyVisibilityToVisible); }, 300);
-            setTimeout(function(){ $('.splash-apresentador').addClass('animated fadeInDown').css(modifyVisibilityToVisible); }, 300);
-            setTimeout(function(){ $('.title-apresentador').addClass('animated zoomIn').css(modifyVisibilityToVisible); }, 400);
+            setTimeout(function(){ $('.info-intro-atracoes .desc-section').addClass('animated fadeInDown-rotate').css(modifyVisibilityToVisible); }, 200);
+            setTimeout(function(){ $('.splash-apresentador').addClass('animated fadeInDown').css(modifyVisibilityToVisible); }, 200);
+            setTimeout(function(){ $('.title-apresentador').addClass('animated zoomIn').css(modifyVisibilityToVisible); }, 300);
 
             /* Show presentation presenter */
-            setTimeout(function(){ $('.apresentador').addClass('animated fadeInRight').css(modifyVisibilityToVisible).delay(500); }, 500);
+            setTimeout(function(){ $('.apresentador').addClass('animated fadeInRight').css(modifyVisibilityToVisible).delay(400); }, 400);
 
             velocity = 100;
             animationSpeakers = 100;
@@ -231,7 +282,7 @@
         }
 
         /* Location */
-        if ($(window).scrollTop() > $('.local-evento').position().top - 450) {
+        if ($(window).scrollTop() > $('.local-evento').position().top - 550) {
             markMenuItem(3);
             $('.local-evento').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             setTimeout(function() {$('.img-intro-local').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);}, 1200);
@@ -244,15 +295,11 @@
         }
 
          /* Slide Local */
-         if ($(window).scrollTop() > $('.content-local').position().top - 350) {
+         if ($(window).scrollTop() > $('.content-local').position().top - 550) {
             $('.slider-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
-         }
-
-         /* Info local description */
-         if ($(window).scrollTop() > $('.content-local').position().top + 50) {
             $('.info-local').addClass('animated fadeIn').css(modifyVisibilityToVisible);
          }
-0
+
          if ($(window).scrollTop() > $('.intro-ingresso').position().top - 250) {
             markMenuItem(4);
             $('.intro-ingresso').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
@@ -293,19 +340,19 @@
         }
 
          /* Patrocinio bronze */
-        if ($(window).scrollTop() > $('.patrocinadores.bronze').position().top - 400) {
+        if ($(window).scrollTop() > $('.patrocinadores.bronze').position().top - 450) {
             $('.patrocinadores.bronze .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.bronze .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
          /* Patrocinio apoiadores */
-        if ($(window).scrollTop() > $('.apoiadores').position().top - 400) {
+        if ($(window).scrollTop() > $('.apoiadores').position().top - 450) {
             $('.patrocinadores.apoiadores .title-patrocinadores').addClass('animated fadeInLeft').css(modifyVisibilityToVisible);
             $('.patrocinadores.apoiadores .patrocinador').addClass('animated flipInY').css(modifyVisibilityToVisible);
         }
 
         /* About */
-        if ($(window).scrollTop() > $('.intro-sobre').position().top - 400) {
+        if ($(window).scrollTop() > $('.intro-sobre').position().top - 450) {
             markMenuItem(5);
             $('.intro-sobre').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
 
@@ -319,17 +366,17 @@
         }
 
         /* Info About */
-        if ($(window).scrollTop() > $('.intro-sobre').position().top - 50) {
+        if ($(window).scrollTop() > $('.intro-sobre').position().top - 100) {
             setTimeout(function() {
                 $('.info-sobre').addClass('animated flipInY').css(modifyVisibilityToVisible);
-            }, 400);
+            }, 200);
         }
 
         /* Novidades */
-        if ($(window).scrollTop() > $('.novidades').position().top - 400) {
+        if ($(window).scrollTop() > $('.novidades').position().top - 450) {
             setTimeout(function() {
                 $('.novidades').addClass('animated fadeInRight').css(modifyVisibilityToVisible);
             }, 400);
         }
     });
-});
+}
