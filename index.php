@@ -21,16 +21,17 @@
                                     <li class="item-menu-fixed"><a onClick="$('html,body').animate({scrollTop: $('.atracoes').offset().top - 70}, 1500);" class="white shadow f-20 pointer">Atrações</a></li>
                                     <li class="item-menu-fixed"><a onClick="$('html,body').animate({scrollTop: $('.local-evento').offset().top - 70}, 1500);" class="white shadow f-20 pointer">Local</a></li>
                                     <li class="item-menu-fixed"><a onClick="$('html,body').animate({scrollTop: $('.ingresso').offset().top - 70}, 1500);" class="white shadow f-20 pointer">Inscrições</a></li>
+                                    <li class="item-menu-fixed"><a href="/programacao" class="white shadow f-20 pointer">Programação</a></li>
                                     <li class="item-menu-fixed item-last"><a onClick="$('html,body').animate({scrollTop: $('.sobre').offset().top - 70}, 1500);"  class="white shadow f-20 pointer">Sobre</a></li>
                                 </ul>
                             </nav>
-                            <ul class="redes-fixed hidden-xs">
+                            <ul class="redes-fixed hidden-sm hidden-xs">
                                 <li class="item-redes-fixed"><a href="https://www.facebook.com/frontinaracaju" target="_blank"><img src="assets/images/icon_fixed_face.png" alt="ícone facebook"></a></li>
                                 <li class="item-redes-fixed"><a href="https://twitter.com/frontinaracaju" target="_blank"><img src="assets/images/icon_fixed_twitter.png" alt="ícone twitter"></a></li>
                                 <li class="item-redes-fixed"><a href="https://github.com/Frontinaracaju/rockandcode" target="_blank"><img src="assets/images/icon_fixed_github.png" alt="ícone github"></a></li>
                                 <li class="item-redes-fixed item-last"><a href="mailto:contato@frontinaracaju.com.br" target="_blank"><img src="assets/images/icon_fixed_email.png" alt="ícone contato"></a></li>
                             </ul>
-                            <a class="button-inscreva-fixed button-green f-14 radius" href="http://www.eventick.com.br/rockandcode" target="_blank">Inscreva-se já!</a>
+                            <a class="button-inscreva-fixed button-green f-14 radius hidden-sm" href="http://www.frontinaracaju.com.br/certificado" target="_blank">Meu Certificado</a>
                         </div>
                     </div>
                 </div>
@@ -85,22 +86,22 @@
                 <div class="info-local-valor" style="display:none;" itemscope itemtype="http://schema.org/Offer">
                     <span class="local white shadow f-48">AABB</span><br>
                     <span class="cidade cream shadow f-28">Aracaju/SE</span><br>
-                    <span class="valor yellow shadow f-20" itemprop="price">R$: 125,00</span>
+                    <!-- <span class="valor yellow shadow f-20" itemprop="price">R$: 125,00</span> -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 chamada-intro hidden-xs">
                 <h2 class="txt-chamada rotate">
-                    <span class="first-line white shadow f-34">E você vai ficar de fora desse evento</span><br>
-                    <span class="second-line white shadow f-40">repleto de <span class="yellow">código</span> e <span class="yellow">rock n’ roll?</span></span>
+                    <span class="first-line white shadow f-34">Obrigado pela participação</span><br>
+                    <span class="second-line white shadow f-40">Aguardamos vocês em <span class="yellow">2015</span></span>
                 </h2>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 button-info-promo" itemscope itemtype="http://schema.org/Offer">
-                <a class="button-inscreva-topo button-green f-40 radius" itemprop="url" href="http://www.eventick.com.br/rockandcode" target="_blank" style="display:none;">Inscreva-se já!</a>
-                <span class="info-promo-topo white shadow f-12"><span class="yellow">Camisa Grátis</span> - 100 primeiros inscritos</span>
+                <a class="button-inscreva-topo button-green f-40 radius" itemprop="url" href="http://www.frontinaracaju.com.br/certificado" target="_blank" style="display:none;">Meu Certificado</a>
+                <span class="info-promo-topo white shadow f-12"><span class="yellow">Contemplando -</span> 10 horas de atividades</span>
             </div>
         </div>
     </div>
@@ -148,7 +149,7 @@
             </div>
 
             <div class="row row-palestrantes" id="first-line-speakers">
-                <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Web Audio Hero" data-description="Desvendaremos esta API de alto nível para processamento e sintetização de áudio em aplicações web: A API Web Audio – que nos permitirá quebrar o silêncio da web sem limitações.">
+                <div class="col-md-3 col-sm-6 item-palestrante almir" data-name="Web Audio Hero" data-description="Desvendaremos esta API de alto nível para processamento e sintetização de áudio em aplicações web: A API Web Audio – que nos permitirá quebrar o silêncio da web sem limitações.<br/><a href='https://speakerdeck.com/almirfilho/web-audio-hero' class='white f-26 slides target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_almir.png" alt="Foto do palestrante Almir"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Almir Filho</h4>
@@ -157,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Atomic Design" data-description="Aprenda essa nova metodologia para organizar seu CSS, onde ele não diz como escrever, mas sim como organizar. Obviamente com algumas pitadas de pré-processador e Física Quântica ;)">
+                <div class="col-md-3 col-sm-6 item-palestrante suissa" data-name="Atomic Design" data-description="Aprenda essa nova metodologia para organizar seu CSS, onde ele não diz como escrever, mas sim como organizar. Obviamente com algumas pitadas de pré-processador e Física Quântica ;)<br/><a href='http://pt.slideshare.net/suissapg/atomic-design-28724858' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_suissa.png" alt="Foto do palestrante Suissa"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Suissa</h4>
@@ -166,27 +167,27 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante gustavo" data-name="Máximo de performance com apps Híbridos" data-description="Mostrarei dicas, problemas com soluções reais que sempre enfrentamos ao desenvolver apps híbridos com Cordova/PhoneGap  para você atingir o máximo de performance e a melhor experiência para você entregar um produto fantástico para seu usuário.">
-                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_gustavo.png" alt="Foto do palestrante Gustavo"></div>
+                <div class="col-md-3 col-sm-6 item-palestrante zeno" data-name="Tracking.js" data-description="Em função de problemas de saúde o Gustavo foi substituido pelo Zeno Rocha que falou sobre o Tracjing.js seu novo projeto na Liferay.<br/><a href='http://pt.slideshare.net/mairatma/tracking-js' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
+                    <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_zeno.png" alt="Foto do palestrante Zeno"></div>
                     <div class="info-palestrante">
-                        <h4 class="title-palestrante white shadow f-26 txt-center">Gustavo Costa</h4>
-                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Tonails</h5>
+                        <h4 class="title-palestrante white shadow f-26 txt-center">Zeno Rocha</h4>
+                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Liferay</h5>
                         <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Controle de fluxo com execução assíncrona" data-description="Analise callbacks, seus mitos e suas reais limitações. Referenciando as promises e generators. ">
+                <div class="col-md-3 col-sm-6 item-palestrante emer" data-name="Controle de fluxo com execução assíncrona" data-description="Analise callbacks, seus mitos e suas reais limitações. Referenciando as promises e generators. <br/><a href='https://speakerdeck.com/jcemer/controle-de-fluxo-com-execucao-assincrona' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_emer.png" alt="Foto do palestrante Jean Carlo Emer"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jean Carlo Emer</h4>
-                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Code Miner</h5>
+                        <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Grupo RBS</h5>
                         <div class="bt-ver-mais f-20">+</div>
                     </div>
                 </div>
             </div>
 
             <div class="row row-palestrantes" id="second-line-speakers">
-                <div class="col-md-3 col-sm-6 item-palestrante jaydson" data-name="...And ES6 For All" data-description="O JavaScript, assim como algumas boas bandas de Rock, foi subestimado por muito tempo. Nessa talk, abordaremos um pouco da história da linguagem, as principais novas features, benefícios e como usar a nova versão da ECMAScript, a.k.a, Harmony/ES6  hoje mesmo em produção! ">
+                <div class="col-md-3 col-sm-6 item-palestrante jaydson" data-name="...And ES6 For All" data-description="O JavaScript, assim como algumas boas bandas de Rock, foi subestimado por muito tempo. Nessa talk, abordaremos um pouco da história da linguagem, as principais novas features, benefícios e como usar a nova versão da ECMAScript, a.k.a, Harmony/ES6  hoje mesmo em produção! <br/><a href='https://speakerdeck.com/jaydson/and-es6-for-all' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_jaydson.png" alt="Foto do palestrante Jaydson"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Jaydson Gomes</h4>
@@ -195,7 +196,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante davidson" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                <div class="col-md-3 col-sm-6 item-palestrante davidson" data-name="Guia do Front-end das galaxias" data-description="Como encarar os desafios da área de desenvolvimento front-end para web, esse campo que é cheio de grandes desafios, sejam eles voltados para dispositivos, browsers, resoluções... Então, quais frameworks, ferramentas e bibliotecas são relevantes para aprimorar sua forma de trabalho? Venha conhecer 42 dicas para trabalhar mais feliz.<br/><a href='http://pt.slideshare.net/davidsonfellipe/guia-do-front-end-das-galaxias' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_davidson.png" alt="Foto do palestrante Davidson"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Davidson Fellipe</h4>
@@ -204,7 +205,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante felipe" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                <div class="col-md-3 col-sm-6 item-palestrante felipe" data-name="Como nasce um framework front-end para mais de 70 milhões de usuários?" data-description="Vamos discutir organizacional e tecnicamente como se torna viável um projeto de tal magnitude, lições aprendidas, desafios superados e descobertas ao longo deste projeto, que visa atender diversos dispositivos e tipos de audiência diferente, focado em performance, mas também em qualidade e manutenabilidade.<br/><a href='https://speakerdeck.com/felipenmoura/como-desenvolver-um-framework-front-end-para-mais-de-70-milhoes-de-usuarios' class='white f-26 slides' target='_blank'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_felipe.png" alt="Foto do palestrante Felipe"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Felipe Nascimento</h4>
@@ -213,7 +214,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-6 item-palestrante reinaldo" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                <div class="col-md-3 col-sm-6 item-palestrante reinaldo" data-name="Dez razões para você continuar desenvolvendo para a Web" data-description="Muitas vezes esquecemos o quanto a Web é importante e já faz parte da nossa vida. Essa palestra vai mostrar que a Web é muito mais do que um conjunto de elementos e porque precisamos continuar a luta para que ela seja livre e aberta.<br/><a href='http://pt.slideshare.net/reinaldoferraz/dez-motivos-para-voc-continuar-desenvolvendo-para-a-web' class='white f-26 slides'>Slides da Palestra</a>">
                     <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_reinaldo.png" alt="Foto do palestrante Reinaldo"></div>
                     <div class="info-palestrante">
                         <h4 class="title-palestrante white shadow f-26 txt-center">Reinaldo Ferraz</h4>
@@ -239,7 +240,7 @@
                     </div>
                     <div class="row">
 
-                        <div class="col-xs-6 item-lightning igor" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
+                        <div class="col-xs-6 item-lightning igor" data-name="Google Analytics - Guia de Campo" data-description="Aprenda a mensurar a performance do seu site e entender seu Público com Google Analytics. Nesta palestra você encontra todos os meios para entender as necessidades dos usuários e traçar estratégias durante desenvolvimento.">
                             <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_igor.png" alt="Foto do palestrante Igor"></div>
                             <div class="info-palestrante">
                                 <h4 class="title-palestrante white shadow f-20 txt-center">Igor Cruz</h4>
@@ -248,11 +249,11 @@
                             </div>
                         </div>
 
-                        <div class="col-xs-6 item-lightning" data-name="Aguardando título da palestra" data-description="Aguardando descrição da palestra.">
-                            <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_aguarde.png" alt="Foto do palestrante à decidir"></div>
+                        <div class="col-xs-6 item-lightning" data-name=" O Segredo das Chrome Extensions" data-description="Vamos entender o passo a passo do desenvolvimento de uma extensão, indo da definição da estrutura da aplicação até a publicação na Chrome Store.<br/><a href='http://www.slideshare.net/RodolfoDias1/desenvolvendo-chrome-extensions class='white f-26 slides'>Slides da Palestra</a>">
+                            <div class="avatar-palestrante"><img src="assets/images/avatares/avatar_rodolfo.png" alt="Foto do palestrante à decidir"></div>
                             <div class="info-palestrante">
-                                <h4 class="title-palestrante white shadow f-20 txt-center">Aguardando</h4>
-                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">Resultado da votação</h5>
+                                <h4 class="title-palestrante white shadow f-20 txt-center">Rodolfo Dias</h4>
+                                <h5 class="trabalho-palestrante yellow shadow f-16 txt-center">UFMG</h5>
                                 <div class="bt-ver-mais f-16">+</div>
                             </div>
                         </div>
@@ -385,6 +386,7 @@
                                 <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://site.unit.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-unit.png" alt="logo unit" class="logo-patrocinio"></a></div>
                                 <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://behold.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-behold.png" alt="logo behold" class="logo-patrocinio"></a></div>
                                 <div class="col-sm-2 col-xs-12 patrocinador"><a href="https://www.facebook.com/GoLifeCompany?fref=ts" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-golife.png" alt="logo golife" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-12 patrocinador"><a href="http://www.infox.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-infox.png" alt="logo infox" class="logo-patrocinio"></a></div>
                             </div>
                         </div>
                     </div>
@@ -460,10 +462,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3 class="title-patrocinadores shadow white f-34">Patrocínio <span class="brown">Bronze</span></h3>
-                        <div class="lista-patrocinadores">
+                        <div class="lista-patrocinadores col-md-12">
                             <div class="row">
-                                <div class="col-sm-2 col-xs-12  patrocinador"><a href="http://www.globo.com/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-globo.png" alt="logo globo.com" class="logo-patrocinio"></a></div>
-                                <div class="col-sm-2 col-xs-12  patrocinador"><a href="http://www.xprocess.com.br/novo/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-xprocess.png" alt="logo xprocess" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="http://www.globo.com/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-globo.png" alt="logo globo.com" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="http://www.xprocess.com.br/novo/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-xprocess.png" alt="logo xprocess" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="http://www.sgnsolucoes.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-sgn.png" alt="logo sgn" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="http://ideiaup.com/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-ideiaup.png" alt="logo ideiaup" class="logo-patrocinio"></a></div>
+                                <div class="col-sm-2 col-xs-6  patrocinador"><a href="https://paggcerto.com.br/" target="_blank"><img src="assets/images/patrocinio/logo-patrocinio-paggcerto.png" alt="logo paggcerto" class="logo-patrocinio"></a></div>
                         </div>
                     </div>
                 </div>
@@ -471,14 +476,14 @@
         </div>
     </section>
     <section class="o-que-falam">
-        <div class="row">
+        <div class="row hidden-xs">
             <div class="col-md-12">
                 <div class="bg-title-falam"><h3 class="title-falam f-26 txt-center">O que a galera tem falado do Rock and Code</h3></div>
                 <div class="desc-falam white f-16 white shadow txt-center">Apareça aqui também utilizando <span class="yellow">@frontinaracaju</span>.</div>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row hidden-xs">
             <div class="com-md-12">
                 <div class="lista-avatares">
                     <div class="item-falam">
@@ -549,7 +554,7 @@
                         <div class="info-italo">
                             <h4 class="title-organizador yellow shadow f-26">Ítalo Waxman</h4>
                             <h5 class="funcao-organizador white shadow f-12">Designer / Front-end</h5>
-                            <div class="redes-organizador">
+                            <div class="redes-organizador hidden-xs">
                                 <div class="email icon-rede"><a href="mailto:italowaxman@gmail.com" title="E-mail"><img src="assets/images/icon_redes_mail.png" alt="icone e-mail" class="icon-mail"></a></div>
                                 <div class="twitter icon-rede"><a href="https://twitter.com/italowaxman" title="Twitter"><img src="assets/images/icon_redes_twitter.png" alt="icone twitter" class="icon-twitter"></a></div>
                                 <div class="facebook icon-rede"><a href="https://www.facebook.com/italowaxman" title="Facebook"><img src="assets/images/icon_redes_facebook.png" alt="icone facebook" class="icon-face"></a></div>
@@ -563,7 +568,7 @@
                         <div class="info-julio">
                             <h4 class="title-organizador yellow shadow f-26">Júlio Cézar</h4>
                             <h5 class="funcao-organizador white shadow f-12">Front-end Developer</h5>
-                            <div class="redes-organizador">
+                            <div class="redes-organizador hidden-xs">
                                 <div class="email icon-rede"><a href="mailto:cezinhajc@gmail.com" title="E-mail"><img src="assets/images/icon_redes_mail.png" alt="icone e-mail" class="icon-mail"></a></div>
                                 <div class="twitter icon-rede"><a href="https://twitter.com/cezinhajc" title="Twitter"><img src="assets/images/icon_redes_twitter.png" alt="icone twitter" class="icon-twitter"></a></div>
                                 <div class="facebook icon-rede"><a href="https://www.facebook.com/CEZINHAJC" title="Facebook"><img src="assets/images/icon_redes_facebook.png" alt="icone facebook" class="icon-face"></a></div>
