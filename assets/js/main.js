@@ -48,7 +48,9 @@ function assertPreConditions() {
                 $('.item-falam:nth-child(' + loop + ') .info-item-falam').find('.avatar img').attr('src', tweets[i].user.profile_image_url);
                 loop += 1;
             }
-        } catch(e) {}
+        } catch(e) {
+            console.log('Twitter fail');
+        }
     });
 
 
@@ -119,7 +121,7 @@ function assertPreConditions() {
             content  += '</div>';
             content  += '</div>';
 
-        $('body').append('<div id="main-menu" class="selected-speaker"> ' + content + '<h2 class="yellow shadow f-34 title-speaker animated fadeInLeft">' + elementWithInformation.attr('data-name') + '</h2><p class="description-speaker f-16 shadow white animated fadeInRight">' + elementWithInformation.attr('data-description') + '</p></div>');
+        $('body').append('<div id="main-menu" class="selected-speaker"> ' + content + '<h2 class="yellow shadow f-26 title-speaker animated fadeInLeft">' + elementWithInformation.attr('data-name') + '</h2><p class="description-speaker f-16 shadow white animated fadeInRight">' + elementWithInformation.attr('data-description') + '</p></div>');
 
         position = ($(window).height() - $('#main-menu').height()) / 2;
         $('#main-menu').css({top: position});
@@ -183,9 +185,10 @@ function assertPreConditions() {
             /* Links of menu */
             var menuLinks = [
                /* Label , link, In Effect, Out effect */
-               ['Atrações', '$(\'html,body\').animate({scrollTop: $(\'.atracoes\').offset().top - 70}, 1500);', 'fadeInRight'],
+               ['Atrações', 'if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {window.scrollTo(200,$(\'.atracoes\').offset().top - 70)}else{$(\'html,body\').animate({scrollTop: $(\'.atracoes\').offset().top - 70}, 1500);}', 'fadeInRight'],
                ['Local', '$(\'html,body\').animate({scrollTop: $(\'.local-evento\').offset().top - 70}, 1500);', 'fadeInRight'],
                ['Inscrições', '$(\'html,body\').animate({scrollTop: $(\'.ingresso\').offset().top - 70}, 1500);', 'fadeInRight'],
+               ['Programação', 'http://www.frontinaracaju.com.br/programacao', 'fadeInRight'],
                ['Sobre', '$(\'html,body\').animate({scrollTop: $(\'.sobre\').offset().top - 70}, 1500);', 'fadeInRight']
             ];
 
